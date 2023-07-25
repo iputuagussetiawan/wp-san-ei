@@ -1,6 +1,14 @@
 import { createPopper } from '@popperjs/core';
 import * as bootstrap from 'bootstrap';
 
+import Navbar from './modules/Navbar'
+const navbar=new Navbar();
+
+
+window.addEventListener("load", (event) => {
+	navbar.hoverDropdown();
+});
+
 
 
 // document.addEventListener("DOMContentLoaded", function(){

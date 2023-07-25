@@ -1,0 +1,49 @@
+@use 'sass:math';
+@use '../../../_config.scss' as *;
+
+.card-product{
+    @include imageRatio(330,350);
+    position: relative;
+    &__image-container{
+        margin-bottom: 30px;
+        overflow: hidden;
+        img{
+            transition:1s ease;
+        }
+    }
+    &__title{
+        color: color(black,200);
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 175%
+    }
+    &__price{
+        color: color(blue,500);
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 250%;
+
+        del{
+            padding-right: 10px;
+            color: rgba(96, 125, 139, 0.50);
+            font-size: 20px;
+        }
+    }
+    &__on-sale{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 175%;
+        background: color(blue,500);
+        color: #ffffff;
+        z-index: 1;
+    }
+    &:hover &__image-container img{
+        transform: scale(1.1);
+    }
+}

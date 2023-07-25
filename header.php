@@ -31,51 +31,51 @@
 			</div>
 			<nav class="navbar navbar-expand-lg  navbar-custom">
 				<div class="container-fluid">
-				    <a class="navbar-brand" href="
-				    	<?php if ($currentLang=='en') {?>
-		              		<?php echo get_option("siteurl"); ?>
-		              	<?php } elseif ($currentLang=='id') { ?>
-		              	   	<?php echo get_option("siteurl"); ?>/id
-		              	<?php } ?>
-				    ">
-				    	<img src="<?php echo get_stylesheet_directory_uri() . '/images/logo.svg'?>" alt="Brand Logo">
-				    </a>
-				   
-				    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				      	<span class="line"></span>
-          				<span class="line"></span>
-          				<span class="line"></span>
-				    </button>
-				    <div class="collapse navbar-collapse navbar-desktop">
-			        	<?php 
-			        		wp_nav_menu(array(
-					            'theme_location' => 'primary',
-					            'depth'          => 3,
-					            'container'      => 'false',
-					            'menu_class'     => 'navbar-nav me-auto mb-2 mb-lg-0',
-					            'fallback_cb' 	 => '__return_false',
-					            'walker'         => new bootstrap_5_wp_nav_menu_walker()
-					            )
-					        );
-			        	?>
-			        </div>
+					<a class="navbar-brand" href="
+						<?php if ($currentLang=='en') {?>
+							<?php echo get_option("siteurl"); ?>
+						<?php } elseif ($currentLang=='id') { ?>
+							<?php echo get_option("siteurl"); ?>/id
+						<?php } ?>
+					">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/images/logo.svg'?>" alt="Brand Logo">
+					</a>
+				
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</button>
+					<div class="collapse navbar-collapse navbar-desktop">
+						<?php 
+							wp_nav_menu(array(
+								'theme_location' => 'primary',
+								'depth'          => 3,
+								'container'      => 'false',
+								'menu_class'     => 'navbar-nav me-auto mb-2 mb-lg-0',
+								'fallback_cb' 	 => '__return_false',
+								'walker'         => new bootstrap_5_wp_nav_menu_walker()
+								)
+							);
+						?>
+					</div>
 
 					<div class="cart-wishlist-holder">
-				    	<?php 
-			        		wp_nav_menu(array(
-					            'theme_location' => 'secondary',
-					            'depth'          => 3,
-					            'container'      => 'false',
-					            'menu_class'     => 'navbar-nav menu-right mr-auto',
-					            'fallback_cb' 	 => '__return_false',
-					            'walker'         => new bootstrap_5_wp_nav_menu_walker()
-					            )
-					        );
-			        	?>
-				    </div>
-		        </div>
-		        <!-- <div  id="searchform">
-			        <?php wc_get_template_part('product', 'searchform');?>
-		        </div>    -->
-	      	</nav>
+						<?php 
+							wp_nav_menu(array(
+								'theme_location' => 'secondary',
+								'depth'          => 3,
+								'container'      => 'false',
+								'menu_class'     => 'navbar-nav menu-right mr-auto',
+								'fallback_cb' 	 => '__return_false',
+								'walker'         => new bootstrap_5_wp_nav_menu_walker()
+								)
+							);
+						?>
+					</div>
+				</div>
+				<!-- <div  id="searchform">
+					<?php wc_get_template_part('product', 'searchform');?>
+				</div>    -->
+			</nav>
 		</header>

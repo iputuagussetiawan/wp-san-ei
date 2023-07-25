@@ -1,0 +1,11 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+@use '../components/cards/_card-otherlink.scss' as *;
+
+.other-link{
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}

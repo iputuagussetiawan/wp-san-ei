@@ -26,123 +26,123 @@ function theme_setup()
 add_action('init', 'theme_setup');
 
 // AUTOMATICALLY ADD CATEGORY PRODUCT ON MENU
-// function add_membership_in_menu($items, $args){
-//   if ($args->theme_location == 'primary') {
+function add_membership_in_menu($items, $args){
+  if ($args->theme_location == 'primary') {
 
-//     $cat_args = array(
-//         'number'     => 7,
-//         'hide_empty' => false,
-//         'parent' => 0
-//     );
+    $cat_args = array(
+        'number'     => 7,
+        'hide_empty' => false,
+        'parent' => 0
+    );
 
-//     $product_categories = get_terms('product_cat', $cat_args);
-//     $currentLang = pll_current_language();
-//     $item = '<li class="menu-item dropdown nav-item has-megamenu order-3">';
-//     if ($currentLang=='en') {
-//       $productEN = get_field('product_categories_en', 'option');
-//       $item .= '<a href="'. $productEN .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Products</span></a><a href="#" class="dropdown-toggle arrow" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="'. get_stylesheet_directory_uri() . '/images/icon/angle-down.svg'.'" alt="arrow"></a>';
-//     } elseif ($currentLang=='id') {
-//       $productID = get_field('product_categories_id', 'option');
-//       $item .= '<a href="'. $productID .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Produk</span></a><a href="#" class="dropdown-toggle arrow" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="'. get_stylesheet_directory_uri() . '/images/icon/angle-down.svg'.'" alt="arrow"></a>';
-//     }
+    $product_categories = get_terms('product_cat', $cat_args);
+    $currentLang = pll_current_language();
+    $item = '<li class="menu-item dropdown nav-item has-megamenu order-3">';
+    if ($currentLang=='en') {
+      $productEN = get_field('product_categories_en', 'option');
+      $item .= '<a href="'. $productEN .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Products</span></a>';
+    } elseif ($currentLang=='id') {
+      $productID = get_field('product_categories_id', 'option');
+      $item .= '<a href="'. $productID .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Produk</span></a>';
+    }
     
-//     $item .= '<div class="dropdown-menu megamenu">';
-//     $item .= '<div class="row justify-content-center align-items-center">';
-//     foreach ($product_categories as $category) {
-//       $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
-//       $image = wp_get_attachment_image_src( $thumbnail_id, 'large' );
-//         $item .= '<div class="menu-item nav-item col-md-3">';
-//         $item .= '<div class="img-zoom">';
-//         $item .= '<a href="' . get_category_link($category->term_id) . '" class="dropdown-item">';
-//         $item .= '<div class="img-ratio img-ratio__image-container">';
-//         $item .= '<img class="img-fit dropdown-item__image" src="'. $image[0]. '" alt="'. $category->name .'">';
-//         $item .= '</div>';
-//         $item .= '<div class="cat-title">'. $category->name .'</div>';
-//         $item .= '</a>';
-//         $item .= '</div>';
-//         $item .= '</div>';
-//     }
+    $item .= '<div class="dropdown-menu megamenu">';
+    $item .= '<div class="row justify-content-center align-items-center">';
+    foreach ($product_categories as $category) {
+      $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+      $image = wp_get_attachment_image_src( $thumbnail_id, 'large' );
+        $item .= '<div class="menu-item nav-item col-md-3">';
+        $item .= '<div class="img-zoom">';
+        $item .= '<a href="' . get_category_link($category->term_id) . '" class="dropdown-item">';
+        $item .= '<div class="img-ratio img-ratio__image-container">';
+        $item .= '<img class="img-fit dropdown-item__image" src="'. $image[0]. '" alt="'. $category->name .'">';
+        $item .= '</div>';
+        $item .= '<div class="cat-title">'. $category->name .'</div>';
+        $item .= '</a>';
+        $item .= '</div>';
+        $item .= '</div>';
+    }
 
-//     $item .= '<div class="menu-item nav-item col-md-3 text-center">';
-//     if ($currentLang=='en') {
-//       $categoriPage = get_field('product_categories_en', 'option');
-//       $item .= '<a href="' . $categoriPage . '" class="btn-standard">explore more</a>';
-//     } elseif ($currentLang=='id') {
-//       $categoriPageID = get_field('product_categories_id', 'option');
-//       $item .= '<a href="' . $categoriPageID . '" class="btn-standard">selengkapnya</a>';
-//     }
-//     $item .= '</div>';
+    $item .= '<div class="menu-item nav-item col-md-3 text-center">';
+    if ($currentLang=='en') {
+      $categoriPage = get_field('product_categories_en', 'option');
+      $item .= '<a href="' . $categoriPage . '" class="btn-standard">explore more</a>';
+    } elseif ($currentLang=='id') {
+      $categoriPageID = get_field('product_categories_id', 'option');
+      $item .= '<a href="' . $categoriPageID . '" class="btn-standard">selengkapnya</a>';
+    }
+    $item .= '</div>';
 
-//     $item .= '</div>';
-//     $item .= '</div>';
-//     $item .= '</li>';
-//     $items .= $item;
-//   }
+    $item .= '</div>';
+    $item .= '</div>';
+    $item .= '</li>';
+    $items .= $item;
+  }
 
-//   if ($args->theme_location == 'secondary') {
-//     $currentLang = pll_current_language();  
+  // if ($args->theme_location == 'secondary') {
+  //   $currentLang = pll_current_language();  
 
-//     // SEARCH
-//     $imgSearch = get_stylesheet_directory_uri() . '/images/icon/magnifying-glass.svg';
-//     $imgClose = get_stylesheet_directory_uri() . '/images/icon/close.svg';
-//     $item = '<li class="order-2 nav-item search">';
-//     $item .= '<a class="nav-link search-toggle"><img class="img-search" src="'.$imgSearch.'" alt="search icon"><img class="img-close" src="'.$imgClose.'" alt="close icon"></a>';
-//     $item .= '</li>';
+  //   // SEARCH
+  //   $imgSearch = get_stylesheet_directory_uri() . '/images/icon/magnifying-glass.svg';
+  //   $imgClose = get_stylesheet_directory_uri() . '/images/icon/close.svg';
+  //   $item = '<li class="order-2 nav-item search">';
+  //   $item .= '<a class="nav-link search-toggle"><img class="img-search" src="'.$imgSearch.'" alt="search icon"><img class="img-close" src="'.$imgClose.'" alt="close icon"></a>';
+  //   $item .= '</li>';
 
-//     // CART
-//     $item .= '<li class="shop menu-item mini-cart nav-item">
-//                 <a href="#" data-bs-toggle="modal" data-bs-target="#mini-cart-window" class="nav-link"><img src="'. get_stylesheet_directory_uri() . '/images/icon/cart.svg'.'" alt="Preview"></a>
-//                 </a>
-//                 <span class="mini-cart-count">' . WC()->cart->get_cart_contents_count() . '</span>
-//             </li>';
+  //   // CART
+  //   $item .= '<li class="shop menu-item mini-cart nav-item">
+  //               <a href="#" data-bs-toggle="modal" data-bs-target="#mini-cart-window" class="nav-link"><img src="'. get_stylesheet_directory_uri() . '/images/icon/cart.svg'.'" alt="Preview"></a>
+  //               </a>
+  //               <span class="mini-cart-count">' . WC()->cart->get_cart_contents_count() . '</span>
+  //           </li>';
 
-//     // WISHLIST
-//     $item .= '<li class="shop menu-item wishlist nav-item">'. do_shortcode('[yith_wcwl_items_count]') .'</li>';
+  //   // WISHLIST
+  //   $item .= '<li class="shop menu-item wishlist nav-item">'. do_shortcode('[yith_wcwl_items_count]') .'</li>';
 
-//     $items .= $item;
-//   }
+  //   $items .= $item;
+  // }
 
-//   if ($args->theme_location == 'fourth') {
-//     $currentLang = pll_current_language();
-//     if ($currentLang=='en') {
-//       if( have_rows('catalogs_navbar', 61) ):
-//         while( have_rows('catalogs_navbar', 61) ): the_row();
-//         $catalog = get_sub_field('title_nav_catalogs');
-//         $file = get_sub_field('file_nav_catalogs');
+  // if ($args->theme_location == 'fourth') {
+  //   $currentLang = pll_current_language();
+  //   if ($currentLang=='en') {
+  //     if( have_rows('catalogs_navbar', 61) ):
+  //       while( have_rows('catalogs_navbar', 61) ): the_row();
+  //       $catalog = get_sub_field('title_nav_catalogs');
+  //       $file = get_sub_field('file_nav_catalogs');
 
-//         $item = '<li class="order-1 nav-item catalog">';
-//         $item .= '<a itemprop="url" href="'. $file .'" class="nav-link" target="_blank"><span itemprop="name">'. $catalog . '</span></a>';
-//         $item .= '</li>';
-//         endwhile;
-//       endif;
-//     } elseif ($currentLang=='id') { 
-//       if( have_rows('catalogs_navbar', 63) ):
-//         while( have_rows('catalogs_navbar', 63) ): the_row();
-//         $catalog = get_sub_field('title_nav_catalogs');
-//         $file = get_sub_field('file_nav_catalogs');
+  //       $item = '<li class="order-1 nav-item catalog">';
+  //       $item .= '<a itemprop="url" href="'. $file .'" class="nav-link" target="_blank"><span itemprop="name">'. $catalog . '</span></a>';
+  //       $item .= '</li>';
+  //       endwhile;
+  //     endif;
+  //   } elseif ($currentLang=='id') { 
+  //     if( have_rows('catalogs_navbar', 63) ):
+  //       while( have_rows('catalogs_navbar', 63) ): the_row();
+  //       $catalog = get_sub_field('title_nav_catalogs');
+  //       $file = get_sub_field('file_nav_catalogs');
 
-//         $item = '<li class="order-1 nav-item catalog">';
-//         $item .= '<a itemprop="url" href="'. $file .'" class="nav-link" target="_blank"><span itemprop="name">'. $catalog . '</span></a>';
-//         $item .= '</li>';
-//         endwhile;
-//       endif;
-//     }
+  //       $item = '<li class="order-1 nav-item catalog">';
+  //       $item .= '<a itemprop="url" href="'. $file .'" class="nav-link" target="_blank"><span itemprop="name">'. $catalog . '</span></a>';
+  //       $item .= '</li>';
+  //       endwhile;
+  //     endif;
+  //   }
 
-//     $imgSearch = get_stylesheet_directory_uri() . '/images/icon/magnifying-glass.svg';
-//     $index = isset( $index ) ? absint( $index ) : 0;
-//     $item .= '<li class="order-2 nav-item search">';
-//     $item .= '<form role="search" method="get" class="searchform search-box" action="'. esc_url( home_url( '/' ) ).'">
-//                 <div class="input-group mb-3">
-//                   <input type="search" id="woocommerce-product-search-field-' . $index .'" class="search-field form-control text search-input" placeholder="'. esc_attr__( 'Search All Products', 'woocommerce' ) .'" value="'. get_search_query() .'" name="s" />
-//                   <button class="btn btn-outline-secondary" id="button-addon2" type="submit"><img src="'.$imgSearch.'" alt="search icon"></button>
-//                   <input type="hidden" name="post_type" value="product" />
-//                 </div>
-//             </form>';
-//     $item .=  '</li>';
-//     $items .= $item;
-//   }
-//   return $items;
-// }add_filter('wp_nav_menu_items', 'add_membership_in_menu', 10, 2);
+  //   $imgSearch = get_stylesheet_directory_uri() . '/images/icon/magnifying-glass.svg';
+  //   $index = isset( $index ) ? absint( $index ) : 0;
+  //   $item .= '<li class="order-2 nav-item search">';
+  //   $item .= '<form role="search" method="get" class="searchform search-box" action="'. esc_url( home_url( '/' ) ).'">
+  //               <div class="input-group mb-3">
+  //                 <input type="search" id="woocommerce-product-search-field-' . $index .'" class="search-field form-control text search-input" placeholder="'. esc_attr__( 'Search All Products', 'woocommerce' ) .'" value="'. get_search_query() .'" name="s" />
+  //                 <button class="btn btn-outline-secondary" id="button-addon2" type="submit"><img src="'.$imgSearch.'" alt="search icon"></button>
+  //                 <input type="hidden" name="post_type" value="product" />
+  //               </div>
+  //           </form>';
+  //   $item .=  '</li>';
+  //   $items .= $item;
+  // }
+  return $items;
+}add_filter('wp_nav_menu_items', 'add_membership_in_menu', 10, 2);
 
 
 // LOGO IN LOGIN ADMIN

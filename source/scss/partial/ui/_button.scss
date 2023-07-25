@@ -106,4 +106,18 @@
             transform-origin: bottom right;
         }
     }
+
+    &--white{
+        @extend .btn-standard;
+        color: #ffffff;
+
+        &:before,
+        &::after {
+            background-color: #ffffff;
+        }
+
+        &:hover{
+            color: #ffffff;
+        }
+    }
 }

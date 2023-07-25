@@ -34,6 +34,15 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__holder{
+            .nav-link{
+                padding: 10px 10px;
+                font-size: 14px;
+            }
+        }
+    }
 }
 .navbar-custom {
     width: 100%;
@@ -43,6 +52,7 @@
 
     .navbar-nav{
         .nav-item{
+            position: relative;
             margin-right: 30px;
             &:last-child{
                 margin-right: 0px;
@@ -94,6 +104,14 @@
                             color: #ffffff;
                         }
                     }
+                }
+            }
+            &.catalog .nav-link{
+                background-color: color(blue,500);
+                color: #ffffff;
+                padding: 34px 30px;
+                &::before{
+                    display: none;
                 }
             }
         }
@@ -161,19 +179,41 @@
 }
 .navbar-brand{
     padding: 9px 0px;
-    &__image{
+    &__image,
+    img{
         max-width: 138px;
         height: auto;
     }
 
     @media only screen and (max-width: 1919.98px) {
-        &__image{
+        &__image,
+        img{
             max-width: 110px;
         }
     }
     @media only screen and (max-width: 1199.98px) {
-        &__image{
+        &__image,
+        img{
             max-width: 100px;
         }
     }
 }
+
+.navbar .megamenu{ padding: 1rem; }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+    .navbar .has-megamenu{position:static!important;}
+    .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+    .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+        overflow-y: auto;
+        max-height: 90vh;
+        margin-top:10px;
+    }
+}
+/* ============ mobile view .end// ============ */

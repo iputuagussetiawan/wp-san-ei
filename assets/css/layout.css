@@ -12019,6 +12019,12 @@ textarea.form-control-lg {
   padding: 8px 16px;
   text-align: center;
 }
+@media only screen and (max-width: 1399.98px) {
+  .top-nav__holder .nav-link {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
 
 .navbar-custom {
   width: 100%;
@@ -12027,6 +12033,7 @@ textarea.form-control-lg {
   z-index: 20;
 }
 .navbar-custom .navbar-nav .nav-item {
+  position: relative;
   margin-right: 30px;
 }
 .navbar-custom .navbar-nav .nav-item:last-child {
@@ -12078,6 +12085,14 @@ textarea.form-control-lg {
 .navbar-custom .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-item:hover {
   background-color: #607D8B;
   color: #ffffff;
+}
+.navbar-custom .navbar-nav .nav-item.catalog .nav-link {
+  background-color: #607D8B;
+  color: #ffffff;
+  padding: 34px 30px;
+}
+.navbar-custom .navbar-nav .nav-item.catalog .nav-link::before {
+  display: none;
 }
 .navbar-custom .navbar-toggler {
   position: relative;
@@ -12133,21 +12148,50 @@ textarea.form-control-lg {
 .navbar-brand {
   padding: 9px 0px;
 }
-.navbar-brand__image {
+.navbar-brand__image,
+.navbar-brand img {
   max-width: 138px;
   height: auto;
 }
 @media only screen and (max-width: 1919.98px) {
-  .navbar-brand__image {
+  .navbar-brand__image,
+  .navbar-brand img {
     max-width: 110px;
   }
 }
 @media only screen and (max-width: 1199.98px) {
-  .navbar-brand__image {
+  .navbar-brand__image,
+  .navbar-brand img {
     max-width: 100px;
   }
 }
 
+.navbar .megamenu {
+  padding: 1rem;
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .has-megamenu {
+    position: static !important;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* ============ desktop view .end// ============ */
+/* ============ mobile view ============ */
+@media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 10px;
+  }
+}
+/* ============ mobile view .end// ============ */
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

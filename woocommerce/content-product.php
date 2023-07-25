@@ -30,13 +30,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 do_action( 'woocommerce_before_shop_custom' );
 ?>
-	<a href="<?php the_permalink(); ?>" class="product-hover">
-		<div class="box-product">
-			<div class="img-holder img-zoom">
+	<a href="<?php the_permalink(); ?>" class="card-product">
+		<div class="card-product__info">
+			<div class="card-product__image-container">
 				<?php the_post_thumbnail('full'); ?>
 			</div>
-			<h3 class="product-title"><?php the_title(); ?></h3>
-            <p class="price"><?php woocommerce_template_loop_price(); ?></p>
+			<h3 class="card-product__title"><?php the_title(); ?></h3>
+            <p class="card-product__price"><?php woocommerce_template_loop_price(); ?></p>
 		</div>
         <?php
         if( $product->is_on_sale() ) {
@@ -86,7 +86,7 @@ do_action( 'woocommerce_before_shop_custom' );
                     $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
                 }
             }
-            echo '<span class="onsale-badge">' . $percentage . ' Off</span>';
+            echo '<span class="card-product__on-sale">' . $percentage . ' Off</span>';
         }
         ?>
     </a>
