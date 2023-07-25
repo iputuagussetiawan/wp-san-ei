@@ -1,0 +1,47 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+@use '../components/_scroll-down.scss' as *;
+
+.home-banner{
+    position: relative;
+
+    .swiper-pagination-fraction, 
+    .swiper-pagination-custom, 
+    .swiper-horizontal > .swiper-pagination-bullets, 
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        top: 50%;
+        right: 10px;
+        bottom: unset;
+        left: unset;
+        width: 100px;
+        transform: translateY(-50%);
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, 
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 5px 0px;
+        display: block;
+        height: 30px;
+        border-radius: 0;
+        width:5px;
+        transition: 0.4s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #ffffff
+    }
+
+    
+
+    
+    // .swiper-pagination-bullet{
+       
+    // }
+
+    &__video,
+    &__image{
+        width: 100%;
+        height: 900px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,106 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+
+.cta{
+    &__inner{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: color(blue,400);
+        
+    }
+    &__info-container{
+        padding: 42px 110px 42px 16px;
+    }
+    &__art{
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        max-width: 421px;
+    }
+    &__title{
+        color: #FFF;
+        text-align: right;
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 82px;
+    }
+    &__description{
+        margin-bottom: 32px;
+        color: #FFF;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 43px;
+        text-align: right;
+    }
+    @media only screen and (max-width: 1919.98px) {
+        &__info-container{
+            padding: 2.1875vw 5.729166vw 2.1875vw 16px;
+        }
+        &__art{
+            max-width: 21.9270833vw;
+        }
+        &__title{
+            font-size: 3.45vw;
+            line-height: 1.7;
+        }
+        &__description{
+            font-size: 1.3625vw;
+            line-height: 1.7;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__title{
+            font-size: 27px;
+        }
+        &__description{
+            font-size: 20px;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__description{
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        min-height: 200px;
+        &__art{
+            position: absolute;
+        }
+        &__inner{
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        
+        &__info-container{
+            position: relative;
+            padding: 42px 24px;
+            z-index: 2;
+
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__inner{
+            text-align: center;
+            
+        }
+        &__title,
+        &__description{
+            text-align: left;
+        }
+        &__action-container{
+            display: grid;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        .container-fluid{
+            padding: 0px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<?php
+
+function script_enqueue() {
+	/* Css */
+	wp_enqueue_style('layout', get_stylesheet_directory_uri().'/assets/css/layout.css', array(), '1.0.0', 'all');
+  	wp_enqueue_script('layout', get_stylesheet_directory_uri().'/assets/js/layout.js', array(), '1.0.0', true);
+  	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+
+
+  	//CSS JS FOR HOME
+  	if( is_front_page() ){
+	    wp_enqueue_style('home', get_stylesheet_directory_uri().'/assets/css/home.css', array(), '1.0.0', 'all');
+	    wp_enqueue_script('home', get_stylesheet_directory_uri().'/assets/js/home.js', array(), '1.0.0', true);
+  	}
+
+  	// // ABOUT PAGE
+  	// if( is_page(array('design', 'disain', 'system', 'sistem', 'process-qc', 'proses-kualitas-kontrol', 'public-good', 'barang-publik', 'progressive-market', 'pasar-progresif', 'philosophy', 'filosofi') ) ){
+	//     wp_enqueue_style('about-us', get_stylesheet_directory_uri().'/dist/about-us.css', array(), '1.0.0', 'all');
+	//     wp_enqueue_script('about-us', get_stylesheet_directory_uri().'/dist/about-us.js', array(), '1.0.0', true);
+  	// }
+
+  	// // CATALOGS PAGE
+  	// if( is_page(array('catalogs', 'katalog', 'newsletter') ) ){
+	//     wp_enqueue_style('catalogs', get_stylesheet_directory_uri().'/dist/catalogs.css', array(), '1.0.0', 'all');
+	//     wp_enqueue_script('catalogs', get_stylesheet_directory_uri().'/dist/catalogs.js', array(), '1.0.0', true);
+  	// }
+
+  	// // HOW TO FIX PAGE
+  	// if( is_page(array('how-to-fix', 'cara-memperbaiki') ) ){
+	//     wp_enqueue_style('how-to-fix', get_stylesheet_directory_uri().'/dist/how-to-fix.css', array(), '1.0.0', 'all');
+	//     wp_enqueue_script('how-to-fix', get_stylesheet_directory_uri().'/dist/how-to-fix.js', array(), '1.0.0', true);
+  	// }
+
+  	// // FIND US
+  	// if( is_page(array('find-us', 'temukan-kami') ) ){
+	//     wp_enqueue_style('find-us', get_stylesheet_directory_uri().'/dist/find-us.css', array(), '1.0.0', 'all');
+	//     wp_enqueue_script('find-us', get_stylesheet_directory_uri().'/dist/find-us.js', array(), '1.0.0', true);
+  	// }
+}
+add_action('wp_enqueue_scripts', 'script_enqueue');

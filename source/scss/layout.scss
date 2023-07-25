@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '_config.scss' as *;
+// @use 'plugin/_tmdrPreset.scss' with (
+//     $spacingIncrement: 15,
+// );
+@use "~bootstrap/scss/bootstrap.scss" with (
+    $container-max-widths: (
+        sm:  93%,
+        md:  93%,
+        lg:  93%,
+        xl:  83%,
+        xxl: 83%
+    ),
+);
+@use 'partial/_header.scss' as *;
+@use 'partial/_footer.scss' as *;
+@use 'partial/components/_social-media.scss' as *;
+@use 'partial/components/_scroll-up.scss' as *;
+
+
+// |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| //
+// | Timedoor New Standard                   | //
+// |_________________________________________| //
+
+.ratio-item {
+    @extend %ratioItem;
+}
+
+.container-fluid{
+    padding: 0px 58px;
+    @media only screen and (max-width: 1919.98px) {
+        padding: 0px 3.020833vw;
+    }
+}
+
+.order-6{
+    order: 6;
+}
+
+@media (min-width: 1200px){
+    .modal-xl {
+        --bs-modal-width: 1024px;
+    }
+}
+
+@media (min-width: 1600px){
+    .modal-xl {
+        --bs-modal-width: 1440px;
+    }
+}
+
+@font-face {
+    font-family: 'Kozuka Gothic Pro';
+    src: url('../../fonts/TT0855M_regular.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kozuka Gothic Pro';
+    src: url('../../fonts/TT1159M_medium.TTF') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kozuka Gothic Pro';
+    src: url('../../fonts/TT1160M_bolf.TTF') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+:root {
+	--section-padding: 100px;
+}
+
+@media only screen and (max-width: 1919.98px) {
+	:root {
+		--section-padding: 5.20833vw;//100px
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	:root {
+		--section-padding: 72px;
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	:root {
+		--section-padding: 60px;
+	}
+}
+
+@media only screen and (max-width: 575.98px) {
+	:root {
+		--section-padding: 40px;
+	}
+}
+
+.section-title{
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 3.6px;
+	text-transform: uppercase;
+	color: color(black,100);
+
+    @media only screen and (max-width: 1919.98px) {
+        font-size: 3.645833vw;
+        line-height: 1.7;
+    }
+
+	@media only screen and (max-width: 991.98px) {
+		font-size: 32px;
+	}
+}
+
+.section-content{
+    font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 35px;
+	color: color(gray,400);
+
+    @media only screen and (max-width: 1919.98px) {
+        margin-top:1.666vw;
+        font-size:1.5625vw;
+        line-height: 1.5;
+    }
+	@media only screen and (max-width: 1199.98px) {
+		font-size: 16px;
+		line-height: 1.8;
+	}
+}
+
+.section-padding {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	&--bottom {
+		@extend .section-padding;
+		padding-top: 0px;
+		padding-bottom: var(--section-padding);
+	}
+
+	&--top {
+		@extend .section-padding;
+		padding-top: var(--section-padding);
+		padding-bottom: 0px;
+	}
+
+	&--medium {
+		@extend .section-padding;
+		padding-top: var(--section-padding-medium);
+		padding-bottom: var(--section-padding-medium);
+	}
+
+	&--medium-top {
+		@extend .section-padding--top;
+		padding-top: var(--section-padding-medium);
+	}
+
+	&--medium-bottom {
+		@extend .section-padding--bottom;
+		padding-bottom: var(--section-padding-medium);
+	}
+}

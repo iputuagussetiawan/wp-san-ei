@@ -1,0 +1,282 @@
+@use "sass:math";
+@use "../config.scss" as *;
+@use '../config/_reset.scss';
+@use '../partial/_footer.scss' as *;
+@use '../partial/_header.scss' as *;
+@use '../partial/sections/_section-global.scss' as *;
+@use '../partial/components/banner-logo' as *;
+
+
+body {
+    color: color(black, 200);
+}
+
+// .container {
+//     @media (min-width: 1400px) {
+//         max-width: 80%;
+//         margin: auto;
+//     }
+// }
+
+.ratio-item {
+    @extend %ratioItem;
+}
+
+.banner {
+    position: relative;
+
+    min-height: 1px;
+}
+
+.contact {
+    position: relative;
+    padding-top: 230px;
+    margin-top: 100px;
+
+    @media screen and (max-width: 1599.98px) {
+        padding-top: 130px;
+    }
+
+    @media screen and (max-width: 1199.98px) {
+        padding-top: 10vw;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        padding-top: 0;
+    }
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 600px;
+        height: 500px;
+        z-index: 0;
+        background-image: url("../../../assets/images/top-illustration__1.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 1599.98px) {
+            width: 450px;
+            height: 450px;
+        }
+
+        @media screen and (max-width: 991.98px) {
+            width: 200px;
+            height: 200px;
+        }
+
+
+    }
+
+    &__title {
+        position: relative;
+        margin: 0;
+        font-weight: 700;
+        font-size: 4.17vw;
+        padding: 50px 0;
+
+        @media screen and (max-width:767.98px) {
+            font-size: 32px;
+            padding: 24px 0;
+        }
+    }
+
+
+    &__banner {
+        @include imageRatio(16, 6, $className: "image");
+        // position: relative;
+        // width: 100%;
+        // height: 30rem;
+        // background: url("../../../assets/images/contact-banner.png");
+        // background-position: center;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+    }
+
+    &__form {
+        position: relative;
+        background: #f0f2f6;
+        width: 100%;
+        padding: 180px 0;
+
+        @media screen and (max-width: 767.98px) {
+            padding: 100px 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../../../assets/images/contact-illustration__1.svg");
+            background-repeat: no-repeat;
+        }
+
+        &-container {
+            display: grid;
+            place-items: center;
+        }
+
+        &-content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 0 20px;
+
+            @media screen and (max-width: 1599.98px) {
+                padding: 0;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+
+            // @media screen and (max-width: 1499.98px) {
+            //     gap: 32px;
+            // }
+        }
+
+        &-title {
+            font-weight: 700;
+
+            font-size: 3.3333333333333335vw;
+
+
+            @media screen and (max-width: 767.98px) {
+                font-size: 27px;
+            }
+        }
+
+        &-desc {
+            margin: 0;
+            color: color(black, 100);
+
+            font-size: 1.5625vw;
+
+
+            @media screen and (max-width: 991.98px) {
+                font-size: 1.8vw;
+            }
+
+            @media screen and (max-width: 767.98px) {
+                font-size: 16px;
+            }
+
+        }
+
+        &-input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &-item {
+                padding: 10px 15px;
+                border-radius: 0;
+                height: 80px;
+
+                &::placeholder {
+                    color: colorMod(color(black, 100), +70%);
+                    font-size: 1.5625vw;
+                    vertical-align: middle;
+
+                    @media screen and (max-width: 991.98px) {
+                        font-size: 1.8vw;
+                    }
+
+                    @media screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+
+
+                }
+
+                @media screen and (max-width: 1499.98px) {
+                    height: 64px;
+                }
+
+                @media screen and (max-width: 767.98px) {
+                    height: 56px;
+                }
+
+                @media screen and (max-width: 575.98px) {
+                    height: 48px;
+                }
+
+                &-text {
+                    height: 138px;
+                    padding: 10px 15px;
+
+                    @media screen and (max-width: 1499.98px) {
+                        height: 116px;
+                    }
+
+                    @media screen and (max-width: 991.98px) {
+                        height: 96px;
+                    }
+
+                    @media screen and (max-width: 575.98px) {
+                        height: 80px;
+                    }
+                }
+            }
+
+        }
+
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 40px;
+            width: max-content;
+            min-width: 244px;
+            background-color: color(blue, 300);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 80px;
+
+            font-size: 1.458vw;
+
+
+            @media screen and (max-width: 1499.98px) {
+                min-width: 224px;
+            }
+
+            @media screen and (max-width: 1199.98px) {
+                min-width: 200px;
+            }
+
+            @media screen and (max-width: 991.98px) {
+                padding: 24px 30px;
+                min-width: 160px;
+                font-size: 1.98vw;
+            }
+
+            @media screen and (max-width: 767.98px) {
+                padding: 20px 30px;
+                min-width: 140px;
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 575.98px) {
+                padding: 16px 24px;
+                min-width: 132px;
+            }
+
+            &:hover {
+                background-color: colorMod(color(blue, 300), +20%);
+                color: white;
+            }
+        }
+    }
+}

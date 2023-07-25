@@ -1,0 +1,112 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+.home-ceo{
+    @include imageRatio(525,635,true);
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        align-items: start;
+        gap: 30px;
+    }
+    &__image-container{
+        margin-bottom: 92px;
+        margin-right: 64px;
+        grid-column: 1/5;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 200px;
+            right: 0px;
+            bottom: -92px;
+            left: 0px;
+            background:url('../../../../images/pages/home/CEO/bg.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__image{
+        z-index: 2;
+        left: 64px;
+        bottom: 92px;
+    }
+    &__info-container{
+        padding-left: 96px;
+        margin-bottom: 32px;
+        grid-column: 5/-1;
+    }
+    &__name{
+        margin-bottom: 0px;
+        color: color(blue,400);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    &__position{
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+    }
+
+    @media only screen and (max-width: 1919.98px) {
+        &__name,
+        &__position{
+            font-size: 1.66vw;
+            line-height: 1.5;
+        }
+        &__image-container{
+            margin-bottom: 4.79166vw;
+            margin-right: 3.33vw;
+            &::after{
+                top: 10.416vw;
+                bottom: -4.7916vw;
+            }
+        }
+        &__info-container{
+            padding-left: 5vw;
+        }
+        &__image{
+            left: 3.333vw;
+            bottom: 4.79166vw;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        @include imageRatio(250,302,true);
+        &__info-container{
+            padding-left: 3vw;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__inner{
+            grid-template-columns: repeat(1,1fr);
+            gap: 42px;
+        }
+        &__image-container{
+            margin: 0 auto;
+            margin-bottom: 32px;
+            grid-column: 1/-1;
+        }
+        &__info-container{
+            margin-bottom: 0px;
+            grid-column: 1/-1;
+        }
+        &__name,
+        &__position{
+            font-size: 18px;
+        }
+    }
+    
+
+    @media only screen and (max-width: 767.98px) {
+        &__image-container{
+            max-width: 440px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__image-container{
+            max-width: 320px;
+        }
+    }
+}

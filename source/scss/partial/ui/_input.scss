@@ -1,0 +1,102 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+
+.form-check{
+	.form-check-label{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 130%;
+		color: #333333;
+	}
+	&__count{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 130%;
+		color: #A1A1A1;
+	}
+}
+
+
+
+/*-----------------------------------------
+//////////////// FORM SETUP ///////////////
+-----------------------------------------*/
+
+.form-control-custom,
+.input-text  {
+	position: relative;
+	width: 100%;
+	padding: 10px 15px;
+	border-radius: 0px;
+	box-sizing: border-box;
+	transition: 0.4s ease;
+	border:1px solid color(gray,200);
+	background-color: transparent;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 42px;
+	color:color(black,200);
+	background-color: #ffffff;
+
+	&:focus {
+		border:1px solid color(blue,300);
+		box-shadow: none;
+		outline: none;
+		background-color: #ffffff;
+	}
+
+	&::placeholder{
+		// color: color(gray,200);
+		font-weight: 400;
+		color: colorMod(color(black, 100), +30%);
+	}
+
+	&.wpcf7-not-valid{
+		padding-right: 42px;
+		background: url('https://api.iconify.design/ion/alert-circle.svg?color=%23cb3a31') no-repeat center center / contain;
+		background-repeat: no-repeat;
+		background-position: right 18px center;
+		background-size: 24px 24px;
+		border: 1px solid #CB3A31;
+	}
+
+	@media only screen and (max-width: 1919.98px) {
+		font-size: 1.5625vw;
+		line-height: 1.7;
+	}
+
+	@media only screen and (max-width: 1599.98px) {
+		padding: 6px 14px;
+		font-size: 14px;
+	}
+}
+
+.form-select {
+	background-image: url("../../../../images/heroicons_chevron-down.svg");
+	background-size: 32px 32px;
+
+	@media only screen and (max-width: 767.98px) {
+		background-size: 20px 20px;
+	}
+}
+
+
+.wpcf7-textarea{
+	max-height: 130px;
+}
+
+.wpcf7-not-valid-tip{
+	margin-top: 8px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #CB3A31;
+}
+
+/*-----------------------------------------
+//////////////////////////////// FORM SETUP
+-----------------------------------------*/
+
+.wpcf7-form-control-wrap{
+	position: relative;
+}
+

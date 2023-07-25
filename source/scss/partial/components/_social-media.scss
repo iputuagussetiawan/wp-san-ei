@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+.social-media{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &__link{
+        padding: 15px;
+        border: 1px solid color(gray,100);
+        margin-right: 10px;
+        display: inline-block;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+    &__icon{
+        max-width: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}

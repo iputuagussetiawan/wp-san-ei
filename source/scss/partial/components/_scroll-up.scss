@@ -1,0 +1,29 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+.scroll-up{
+    position: fixed;
+    display: inline-block;
+    bottom: 100px;
+    right: 40px;
+    padding: 12px;
+    z-index: 100;
+    transform: rotate(-90deg);
+    cursor: pointer;
+
+    &__text{
+        width: 150px;
+        //position: absolute;
+        transform: rotate(-90deg);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        color: color(gray,400);
+    }
+
+    &__icon{
+        transform: rotate(90deg);
+    }
+}

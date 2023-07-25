@@ -1,0 +1,91 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+@use '../components/_swiper-fraction.scss' as *;
+@use '../components/cards/_card-superiority.scss' as *;
+
+.superiority{
+    .swiper-button-prev, 
+    .swiper-button-next {
+        position: relative;
+        top: 13px;
+        width: 68px;
+        height: 68px;
+        border: 1px solid color(gray,200);
+        border-radius: 100%;
+        transition: 0.4s ease;
+        svg{
+            width: 24px;
+            height: auto;
+        }
+        &:hover{
+            border: 1px solid color(blue,400);
+        }
+        &:hover path{
+            stroke:color(blue,400);
+        }
+
+    }
+    .swiper-button-prev{
+        left: 0px;
+    }
+    .swiper-button-next{
+        right: 0px;
+    }
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        display: none;
+    }
+    &__header{
+        margin-bottom: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__action{
+        position: relative;
+        display: flex;
+        align-self: center;
+    }
+    &__navigation{
+        position: relative;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        margin-left: 50px;
+        width: 160px;
+    }
+    @media only screen and (max-width: 1919.98px) {
+        .swiper-button-prev, 
+        .swiper-button-next {
+            width: 3.54166vw;
+            height: 3.54166vw;
+        }
+        &__header{
+            margin-bottom: 3.125vw;
+        }
+        &__navigation{
+            width: 8.33vw;
+            min-width: 136px;
+            margin-left: 2.6041vw;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__header{
+            margin-bottom: 32px;
+        }
+        .swiper-button-prev, 
+        .swiper-button-next {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__action {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+@use '../components/cards/_card-category.scss' as *;
+
+.home-categories{
+    
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 30px;
+
+        .card-category:nth-child(7n+1){
+            grid-column: 1/5;
+        }
+        .card-category:nth-child(7n+2){
+            grid-column: 5/9;
+        }
+        .card-category:nth-child(7n+3){
+            grid-column: 9/-1;
+        }
+        .card-category:nth-child(7n+4){
+            grid-column: 1/4;
+        }
+        .card-category:nth-child(7n+5){
+            grid-column: 4/7;
+        }
+        .card-category:nth-child(7n+6){
+            grid-column: 7/10;
+        }
+        .card-category:nth-child(7n+7){
+            grid-column: 10/-1;
+        }
+    }
+}

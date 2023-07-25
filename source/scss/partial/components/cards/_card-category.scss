@@ -1,0 +1,32 @@
+@use 'sass:math';
+@use '../../../_config.scss' as *;
+
+.card-category{
+    @include imageRatio(490,360);
+    position: relative;
+    background-color: blue;
+
+    &__link{
+        display: inline-block;
+        // height: 100%;
+    }
+    // &__image-container{
+    //     height: 100%;
+    // }
+
+    // &__image{
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
+
+    &__logo-container{
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+    }
+
+    &__logo-text{
+        display: none;
+    }
+}

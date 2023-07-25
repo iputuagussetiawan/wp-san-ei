@@ -1,0 +1,56 @@
+@use 'sass:math';
+@use '../../../_config.scss' as *;
+
+.card-visimisi{
+    @include imageRatio(50,50,true);
+    padding-bottom: 50px;
+    border-bottom: 1px solid color(gray,200);
+    &__image-container{
+        vertical-align: middle;
+    }
+    &__title{
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 50px;
+        color: color(blue,400);
+    }
+    &__description{
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 42px;
+        color: color(black,100);
+    }
+
+    @media only screen and (max-width: 1919.98px) {
+        padding-bottom: 2.6041666vw;
+        &__title{
+            font-size: 2.604166vw;
+            line-height: 1.7;
+        }
+        &__description{
+            font-size: 1.666vw;
+            line-height: 1.7;
+        }
+    }
+
+    @media only screen and (max-width:1199.98px) {
+        &__title{
+            margin-bottom: 16px;
+            font-size: 27px;
+        }
+        &__description{
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__image-container{
+            max-width: 38px;
+        }
+        &__title{
+            margin-bottom: 14px;
+        }
+    }
+
+}
