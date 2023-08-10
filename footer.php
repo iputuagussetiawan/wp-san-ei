@@ -88,6 +88,19 @@
 				</div>
 			</div>
 		</footer>
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header">
+				<h5 id="offcanvasRightLabel">Offcanvas right</h5>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<div class="widget woocommerce widget_shopping_cart">
+					<div class="widget_shopping_cart_content">
+						<?php echo woocommerce_mini_cart() ?>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- MINI CART -->
 		<!-- <div class="modal fade mini-cart-modal" id="mini-cart-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">

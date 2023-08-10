@@ -5,6 +5,8 @@ mix
   .js("source/js/home.js", "assets/js/")
   .sass("source/scss/layout.scss", "assets/css/")
   .sass("source/scss/pages/home.scss", "assets/css/")
+  .sass("source/scss/pages/archive-products.scss", "assets/css/")
+  
   .sourceMaps(true, "source-map");
 
 mix.options({

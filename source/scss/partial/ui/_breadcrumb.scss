@@ -1,0 +1,67 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+
+.breadcrumb{
+    margin-bottom: 0px;
+    align-items: center;
+    .breadcrumb-item + .breadcrumb-item::before{
+        position: relative;
+        top: 3px;
+    }
+    .breadcrumb-item{
+        &:first-child::before{
+            display: none;
+        }
+        &::before{
+            content: url('https://api.iconify.design/tabler/chevron-right.svg?color=%2380a0b1');
+        }
+        a{
+            font-size: 16px;
+            line-height: 130%;
+            color: color(black,100);
+            text-transform: uppercase;
+
+            &:hover{
+                color: color(blue,400);
+            }
+        }
+    }
+    .breadcrumb-item.active{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #bdbdbd;
+        text-transform: uppercase;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .breadcrumb-item + .breadcrumb-item::before{
+            top: 1px;
+        }
+        .breadcrumb-item{
+            a{
+                font-size: 14px;
+            }
+        }
+        .breadcrumb-item.active{
+            position: relative;
+            top: 3px;
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        .breadcrumb-item + .breadcrumb-item::before{
+            top: 0px;
+        }
+        .breadcrumb-item{
+            a{
+                font-size: 12px;
+            }
+        }
+        .breadcrumb-item.active{
+            font-size: 12px;
+            top: 5px;
+        }
+    }
+}

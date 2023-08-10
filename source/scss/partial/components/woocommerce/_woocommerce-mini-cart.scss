@@ -1,0 +1,39 @@
+@use 'sass:math';
+@use '../../../_config.scss' as *;
+
+.woocommerce-mini-cart{
+    list-style: none;
+    padding: 0px;
+}
+
+.woocommerce-mini-cart-item{
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
+    .remove_from_cart_button{
+        position: absolute;
+        top: 20px;
+        left: 0px;
+    }
+
+    img{
+        max-width: 100px;
+        height: 100px;
+        border:1px solid #ECECEC;
+        object-fit: cover;
+    }
+
+    &__inner{
+        display: flex;
+        text-decoration: none;
+    }
+
+    &__info{
+        padding-left: 10px;
+        color:  #29292A;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 175%;
+    }
+}

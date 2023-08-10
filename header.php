@@ -52,7 +52,7 @@
 								'theme_location' => 'primary',
 								'depth'          => 3,
 								'container'      => 'false',
-								'menu_class'     => 'navbar-nav me-auto mb-2 mb-lg-0',
+								'menu_class'     => 'navbar-nav menu-left  me-auto mb-2 mb-lg-0',
 								'fallback_cb' 	 => '__return_false',
 								'walker'         => new bootstrap_5_wp_nav_menu_walker()
 								)

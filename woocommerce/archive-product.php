@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-wp_enqueue_style('product', get_stylesheet_directory_uri().'/dist/product.css', array(), '1.0.0', 'all');
+wp_enqueue_style('product', get_stylesheet_directory_uri().'/assets/css/archive-products.css', array(), '1.0.0', 'all');
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -27,43 +27,25 @@ wp_enqueue_style('product', get_stylesheet_directory_uri().'/dist/product.css', 
  * @hooked woocommerce_breadcrumb - 20
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
-do_action( 'woocommerce_before_main_content' );
-$currentLang = pll_current_language();
+	do_action( 'woocommerce_before_main_content' );
+	$currentLang = pll_current_language();
+	$image = get_field('banner_image', 6); //"6" is product id please change yang your page product id
+	$pageHeaderImage=esc_url($image['url']);
+	$pageHeaderTitle="";
+	if (is_product_category()) : 
+		$productCategory = get_queried_object();
+		$catId			 = $productCategory->taxonomy . '_' . $productCategory->term_id;
+		$pageHeaderTitle = $productCategory->name;
+	elseif (is_search()) :
+		$pageHeaderTitle=pll__('Search Result for');
+	else:
+		$pageHeaderTitle= pll__('Products');
+	endif;
+	get_template_part('template-parts/sections/page', 'header', array(
+			'page-header-thumb' => $pageHeaderImage,
+			'page-header-title' =>  $pageHeaderTitle,
+	));
 ?>
-<?php $image = get_field('banner_image', 6); ?>
-<?php if (is_product_category()) : 
-	$productCategory = get_queried_object();
-	$catId			 = $productCategory->taxonomy . '_' . $productCategory->term_id;
-	?>
-
-	<section class="page-banner">
-		<div class="box-banner" style="background-image: url('<?php echo esc_url($image['url']); ?>');">
-			<div class="container">
-				<h1 class="title-banner" data-aos="fade-up"><?php echo $productCategory->name ?></h1>
-			</div>
-		</div>
-	</section>
-<?php elseif (is_search()) : ?>
-	<section class="page-banner">
-		<div class="box-banner" style="background-image: url('<?php echo esc_url($image['url']); ?>');">
-			<div class="container">
-				<h1 class="title-banner" data-aos="fade-up"><?php echo pll__('Search Result for')?> <?php echo get_search_query() ?></h1>
-			</div>
-		</div>
-	</section>
-<?php else: ?>
-	<section class="page-banner">
-		<div class="box-banner" style="background-image: url('<?php echo esc_url($image['url']); ?>');">
-			<div class="container">
-				<h1 class="title-banner" data-aos="fade-up"><?php echo pll__('Products'); 
-				// echo woocommerce_page_title();
-			?></h1>
-			</div>
-		</div>
-	</section>
-<?php endif; ?>
-
-
 <section class="product">
 	<div class="container">
 		<div class="product-holder">
@@ -71,7 +53,6 @@ $currentLang = pll_current_language();
 				<div class="woo-notice">
 					<?php woocommerce_output_all_notices() ?>
 				</div>
-
 				<!-- PRODUCT PAGE -->
 				<?php if (is_shop()): ?>
 				<div class="col-lg-3 filter-holder" data-aos="fade-up">
@@ -79,16 +60,16 @@ $currentLang = pll_current_language();
 						<?php echo do_shortcode('[woof]') ?>
 					</div>
 					<div class="accordion" id="productFilter">
-					  	<div class="accordion-item">
-						    <h2 class="accordion-header" id="headingFilter">
-						      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">Collection</button>
-						    </h2>
-						    <div id="collapseFilter" class="accordion-collapse collapse" aria-labelledby="headingFilter" data-bs-parent="#productFilter">
-						    	<div class="product-filter d-lg-none">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingFilter">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">Collection</button>
+							</h2>
+							<div id="collapseFilter" class="accordion-collapse collapse" aria-labelledby="headingFilter" data-bs-parent="#productFilter">
+								<div class="product-filter d-lg-none">
 									<?php echo do_shortcode('[woof]') ?>
 								</div>
-						    </div>
-					  	</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-9" id="product-holder" data-aos="fade-up">
@@ -96,8 +77,7 @@ $currentLang = pll_current_language();
 						<?php woocommerce_result_count() ?>
 						<?php woocommerce_catalog_ordering() ?>
 					</div>
-					
-	                <div class="product-container">
+					<div class="product-container">
 						<?php 
 						if ( woocommerce_product_loop() ) : 
 							woocommerce_product_loop_start();
@@ -109,14 +89,12 @@ $currentLang = pll_current_language();
 									do_action( 'woocommerce_shop_loop' );?>
 
 									<div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6 product-list">
-						       			<?php wc_get_template_part('content', 'product');?>
-						       		</div>
+										<?php wc_get_template_part('content', 'product');?>
+									</div>
 								<?php }
 							}
 							woocommerce_product_loop_end();
-
 						else:
-			
 							do_action( 'woocommerce_no_products_found' );
 						endif;
 						?>
@@ -126,14 +104,13 @@ $currentLang = pll_current_language();
 					</div>
 				</div>
 				<?php endif; ?>
-
 				<!-- CATEGORY PAGE -->
 				<?php 
 				if( is_product_category() ) {?>
 
 				<div class="
 					<?php  
-				    $term = get_queried_object();
+					$term = get_queried_object();
 					$children = get_terms( $term->taxonomy, array(
 					'parent'    => $term->term_id,
 					'hide_empty' => false
@@ -227,7 +204,6 @@ $currentLang = pll_current_language();
 		</div>
 	</div>
 </section>
-
 <?php 
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
     $url = "https://";   
@@ -246,23 +222,23 @@ if (is_product_category()) :
 	<section class="breadcrumb-section">
 		<div class="container">
 			<nav aria-label="breadcrumb" data-aos="fade-up">
-			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item">
-				    	<?php if ($currentLang=='en') {?>
-				      		<a href="<?php echo get_option("siteurl"); ?>">Home</a>
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
-				      	<?php } ?>
-				    </li>
-				    <li class="breadcrumb-item">
-				    	<?php if ($currentLang=='en') {?>
-				      		<a href="<?php echo get_option("siteurl"); ?>/product">Product</a>
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	<a href="<?php echo get_option("siteurl"); ?>/id/produk">Produk</a>
-				      	<?php } ?>
-				    </li>
-				    <li class="breadcrumb-item active" aria-current="page"><?php echo $productCategory->name ?></li>
-			  	</ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<?php if ($currentLang=='en') {?>
+							<a href="<?php echo get_option("siteurl"); ?>">Home</a>
+						<?php } elseif ($currentLang=='id') { ?>
+							<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
+						<?php } ?>
+					</li>
+					<li class="breadcrumb-item">
+						<?php if ($currentLang=='en') {?>
+							<a href="<?php echo get_option("siteurl"); ?>/product">Product</a>
+						<?php } elseif ($currentLang=='id') { ?>
+							<a href="<?php echo get_option("siteurl"); ?>/id/produk">Produk</a>
+						<?php } ?>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo $productCategory->name ?></li>
+				</ol>
 			</nav>
 		</div>
 	</section>
@@ -275,23 +251,23 @@ if (is_product_category()) :
 	<section class="breadcrumb-section">
 		<div class="container">
 			<nav aria-label="breadcrumb" data-aos="fade-up">
-			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item">
-				    	<?php if ($currentLang=='en') {?>
-				      		<a href="<?php echo get_option("siteurl"); ?>">Home</a>
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
-				      	<?php } ?>
-				    </li>
-				    <li class="breadcrumb-item">
-				    	<?php if ($currentLang=='en') {?>
-				      		<a href="<?php echo get_option("siteurl"); ?>/product">Product</a>
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	<a href="<?php echo get_option("siteurl"); ?>/id/produk">Produk</a>
-				      	<?php } ?>
-				    </li>
-				    <li class="breadcrumb-item active" aria-current="page"><?php echo $category->name; ?></li>
-			  	</ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<?php if ($currentLang=='en') {?>
+							<a href="<?php echo get_option("siteurl"); ?>">Home</a>
+						<?php } elseif ($currentLang=='id') { ?>
+							<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
+						<?php } ?>
+					</li>
+					<li class="breadcrumb-item">
+						<?php if ($currentLang=='en') {?>
+							<a href="<?php echo get_option("siteurl"); ?>/product">Product</a>
+						<?php } elseif ($currentLang=='id') { ?>
+							<a href="<?php echo get_option("siteurl"); ?>/id/produk">Produk</a>
+						<?php } ?>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo $category->name; ?></li>
+				</ol>
 			</nav>
 		</div>
 	</section>
@@ -299,22 +275,22 @@ if (is_product_category()) :
 	<section class="breadcrumb-section">
 		<div class="container">
 			<nav aria-label="breadcrumb" data-aos="fade-up">
-			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item">
-				    	<?php if ($currentLang=='en') {?>
-				      		<a href="<?php echo get_option("siteurl"); ?>">Home</a>
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
-				      	<?php } ?>
-				    </li>
-				    <li class="breadcrumb-item active">
-				    	<?php if ($currentLang=='en') {?>
-				      		Product
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	Produk
-				      	<?php } ?>
-				    </li>
-			  	</ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<?php if ($currentLang=='en') {?>
+							<a href="<?php echo get_option("siteurl"); ?>">Home</a>
+						<?php } elseif ($currentLang=='id') { ?>
+							<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
+						<?php } ?>
+					</li>
+					<li class="breadcrumb-item active">
+						<?php if ($currentLang=='en') {?>
+							Product
+						<?php } elseif ($currentLang=='id') { ?>
+							Produk
+						<?php } ?>
+					</li>
+				</ol>
 			</nav>
 		</div>
 	</section>
@@ -322,21 +298,21 @@ if (is_product_category()) :
 	<section class="breadcrumb-section">
 		<div class="container">
 			<nav aria-label="breadcrumb" data-aos="fade-up">
-			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item">
-				    	<?php if ($currentLang=='en') {?>
-				      		<a href="<?php echo get_option("siteurl"); ?>">Home</a>
-				      	<?php } elseif ($currentLang=='id') { ?>
-				      	   	<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
-				      	<?php } ?>
-				    </li>
-				    <li class="breadcrumb-item active" aria-current="page"><?php echo pll__('Products'); ?></li>
-			  	</ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<?php if ($currentLang=='en') {?>
+							<a href="<?php echo get_option("siteurl"); ?>">Home</a>
+						<?php } elseif ($currentLang=='id') { ?>
+							<a href="<?php echo get_option("siteurl"); ?>/id">Beranda</a>
+						<?php } ?>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo pll__('Products'); ?></li>
+				</ol>
 			</nav>
 		</div>
 	</section>
 <?php endif; ?>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		console.log('loading');
-	</script>
+	</script> -->
 <?php get_footer();
