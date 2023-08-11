@@ -21,7 +21,7 @@ if ( $max_value && $min_value === $max_value ) {
 	?>
 	<div class="quantity input-group">
 	    <label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></label>
-  		<button class="btn btn-default btn-number btn-minus qty_button minus" type="button"  data-type="minus" data-field="quantity"></button>
+		<button class="btn btn-default btn-number btn-minus qty_button minus" type="button"  data-type="minus" data-field="quantity"></button>
 	    <input
 	        type="number"
 	        id="<?php echo esc_attr( $input_id ); ?>"

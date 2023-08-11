@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); 
-wp_enqueue_style('productcss', get_stylesheet_directory_uri().'/dist/product.css', array(), '1.0.0', 'all');
-wp_enqueue_style('woocommerce-custom', get_stylesheet_directory_uri().'/dist/woocommerce-custom.css', array(), '1.0.0', 'all');
+wp_enqueue_style('single-product', get_stylesheet_directory_uri().'/assets/css/single-product.css', array(), '1.0.0', 'all');
+
 ?>
 
 	<?php
@@ -42,7 +42,7 @@ wp_enqueue_style('woocommerce-custom', get_stylesheet_directory_uri().'/dist/woo
 	<?php endwhile; // end of the loop. ?>
 
 <?php
-wp_enqueue_script('product', get_stylesheet_directory_uri().'/dist/product.js', array(), '1.0.0', true);
+// wp_enqueue_script('product', get_stylesheet_directory_uri().'/dist/product.js', array(), '1.0.0', true);
 get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

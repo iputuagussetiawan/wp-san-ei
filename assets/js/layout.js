@@ -14089,6 +14089,30 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./source/scss/pages/single-product.scss":
+/*!***********************************************!*\
+  !*** ./source/scss/pages/single-product.scss ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./source/scss/pages/woocommerce-custom.scss":
+/*!***************************************************!*\
+  !*** ./source/scss/pages/woocommerce-custom.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -14190,6 +14214,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/layout": 0,
+/******/ 			"assets/css/woocommerce-custom": 0,
+/******/ 			"assets/css/single-product": 0,
 /******/ 			"assets/css/archive-products": 0,
 /******/ 			"assets/css/home": 0,
 /******/ 			"assets/css/layout": 0
@@ -14242,10 +14268,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/js/layout.js")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/layout.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/pages/home.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/pages/archive-products.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/js/layout.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/layout.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/pages/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/pages/archive-products.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/pages/single-product.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout"], () => (__webpack_require__("./source/scss/pages/woocommerce-custom.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -1,0 +1,22 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+
+.offcanvas.offcanvas-end{
+    border-left: 1px solid transparent;
+    width: 550px;
+    @media only screen and (max-width: 767.98px) {
+        width: 80%;
+    }
+}
+.offcanvas-shopping{
+    &__title{
+        margin: 0px;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;  
+        color: color(blue,500);
+    }
+}

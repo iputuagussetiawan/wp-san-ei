@@ -88,12 +88,12 @@
 				</div>
 			</div>
 		</footer>
-		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-			<div class="offcanvas-header">
-				<h5 id="offcanvasRightLabel">Offcanvas right</h5>
+		<div class="offcanvas offcanvas-end offcanvas-shopping" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header offcanvas-shopping__header">
+				<h5 id="offcanvasRightLabel" class="offcanvas-shopping__title">Shopping Cart</h5>
 				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
-			<div class="offcanvas-body">
+			<div class="offcanvas-body offcanvas-shopping__body">
 				<div class="widget woocommerce widget_shopping_cart">
 					<div class="widget_shopping_cart_content">
 						<?php echo woocommerce_mini_cart() ?>

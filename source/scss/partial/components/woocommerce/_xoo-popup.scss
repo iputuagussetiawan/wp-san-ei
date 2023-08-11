@@ -1,0 +1,58 @@
+@use 'sass:math';
+@use '../../../_config.scss' as *;
+
+.xoo-cp-container {
+    border-radius: 0px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+span.xoo-cp-close {
+    font-size: 25px;
+    position: absolute;
+    right: -8px;
+    top: -37px;
+    background-color: #fff;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.4s ease;
+    &:hover{
+        transform: rotate(180deg);
+    }
+}
+
+.xoo-cp-atcn {
+    padding: 16px;
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+td.xoo-cp-ptitle a {
+    font-weight: 600;
+    font-size: 18px;
+    color: color(blue,400);
+}
+
+.xcp-btn {
+    background-color: color(blue,500);
+    border: 1px solid color(blue,500);
+    border-radius: 0px;
+    transition: 0.4s ease;
+
+    &:hover{
+        background-color: color(blue,400);
+        border: 1px solid color(blue,400);
+    }
+}
+
+td.xoo-cp-remove .xoo-cp-remove-pd {
+    font-size: 16px;
+    color: #f15353;
+    transition: 0.4s ease;
+    &:hover{
+        color: #f14343;
+    }
+}

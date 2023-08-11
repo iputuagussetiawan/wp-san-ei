@@ -1,6 +1,8 @@
 {
     "/assets/js/layout.js": "/assets/js/layout.js",
     "/assets/js/home.js": "/assets/js/home.js",
+    "/assets/css/woocommerce-custom.css": "/assets/css/woocommerce-custom.css",
+    "/assets/css/single-product.css": "/assets/css/single-product.css",
     "/assets/css/archive-products.css": "/assets/css/archive-products.css",
     "/assets/css/home.css": "/assets/css/home.css",
     "/assets/css/layout.css": "/assets/css/layout.css"
