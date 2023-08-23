@@ -59,7 +59,6 @@
 							);
 						?>
 					</div>
-
 					<div class="cart-wishlist-holder">
 						<?php 
 							wp_nav_menu(array(
@@ -74,8 +73,8 @@
 						?>
 					</div>
 				</div>
-				<!-- <div  id="searchform">
+				<div  id="searchform" class="search-box-container">
 					<?php wc_get_template_part('product', 'searchform');?>
-				</div>    -->
+				</div>   
 			</nav>
 		</header>

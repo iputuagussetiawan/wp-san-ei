@@ -23,6 +23,7 @@
 -----------------------------------------*/
 
 .form-control-custom,
+.form-control,
 .input-text  {
 	position: relative;
 	width: 100%;
@@ -30,25 +31,23 @@
 	border-radius: 0px;
 	box-sizing: border-box;
 	transition: 0.4s ease;
-	border:1px solid color(gray,200);
+	border:1px solid color(gray,50);
 	background-color: transparent;
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 42px;
+	font-size: 18px;
+	font-weight: 400;
 	color:color(black,200);
 	background-color: #ffffff;
 
 	&:focus {
-		border:1px solid color(blue,300);
+		border:1px solid color(blue,400);
 		box-shadow: none;
 		outline: none;
 		background-color: #ffffff;
 	}
 
 	&::placeholder{
-		// color: color(gray,200);
+		color: color(gray,75);
 		font-weight: 400;
-		color: colorMod(color(black, 100), +30%);
 	}
 
 	&.wpcf7-not-valid{

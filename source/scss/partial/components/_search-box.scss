@@ -1,0 +1,53 @@
+@use 'sass:math';
+@use '../../_config.scss' as *;
+
+.search-box-container{
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s;
+    z-index: -1;
+    opacity: 0;
+
+    &.open{
+        top: 100%;
+        opacity: 1;
+
+    }
+}
+
+.search-box{
+    padding: 30px 58px;
+    background-color: #ffffff;
+
+    &__inner{
+        position: relative;
+    }
+
+    &__input{
+        padding-right: 50px;
+        // border-right-color: transparent;
+        // &:focus{
+        //     border:1px solid color(gray,50);
+        //     border-right-color: transparent;
+        // }
+    }
+
+    &__btn{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        padding: 10px;
+        transform: translateY(-50%);
+        z-index: 10;
+        border: transparent;
+
+        &:focus,
+        &:active{
+            box-shadow: none;
+            outline: none;
+            border: transparent;
+        }
+    }
+}

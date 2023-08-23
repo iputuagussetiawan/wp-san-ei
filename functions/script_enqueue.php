@@ -1,17 +1,31 @@
 <?php
 
 function script_enqueue() {
+	$themeVersion = wp_get_theme()->get('Version');
+
 	/* Css */
-	wp_enqueue_style('layout', get_stylesheet_directory_uri().'/assets/css/layout.css', array(), '1.0.0', 'all');
-  	wp_enqueue_script('layout', get_stylesheet_directory_uri().'/assets/js/layout.js', array(), '1.0.0', true);
-  	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+	wp_enqueue_style('layout', get_stylesheet_directory_uri().'/assets/css/layout.css', array(), $themeVersion, 'all');
+	wp_enqueue_script('layout', get_stylesheet_directory_uri().'/assets/js/layout.js', array(), $themeVersion, true);
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
 
 
   	//CSS JS FOR HOME
-  	if( is_front_page() ){
-	    wp_enqueue_style('home', get_stylesheet_directory_uri().'/assets/css/home.css', array(), '1.0.0', 'all');
-	    wp_enqueue_script('home', get_stylesheet_directory_uri().'/assets/js/home.js', array(), '1.0.0', true);
-  	}
+	if( is_front_page() ){
+		wp_enqueue_style('home', get_stylesheet_directory_uri().'/assets/css/home.css', array(), $themeVersion, 'all');
+		wp_enqueue_script('home', get_stylesheet_directory_uri().'/assets/js/home.js', array(), $themeVersion, true);
+	}
+	if (is_page_template('page-login.php')) {
+        //wp_enqueue_style('login_css', get_template_directory_uri() . '/assets/css/pages/login.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('login_js', get_stylesheet_directory_uri() . '/assets/js/login.js', array(), $themeVersion, true);
+    }
+	if (is_page_template('page-register.php')) {
+        //wp_enqueue_style('register_css', get_template_directory_uri() . '/assets/css/pages/register.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('register_js', get_stylesheet_directory_uri() . '/assets/js/register.js', array(), $themeVersion, true);
+    }
+	if (is_page_template('page-myaccount.php')) {
+        //wp_enqueue_style('register_css', get_template_directory_uri() . '/assets/css/pages/register.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('myaccount_js', get_stylesheet_directory_uri() . '/assets/js/myaccount.js', array(), $themeVersion, true);
+    }
 
   	// // ABOUT PAGE
   	// if( is_page(array('design', 'disain', 'system', 'sistem', 'process-qc', 'proses-kualitas-kontrol', 'public-good', 'barang-publik', 'progressive-market', 'pasar-progresif', 'philosophy', 'filosofi') ) ){

@@ -23,11 +23,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-<div class="u-columns col2-set row <?php if ( is_page('my-account') ) echo "my-account-form"; ?>" id="customer_login">
+<div class="u-columns col2-set row justify-content-center <?php if ( is_page('my-account') ) echo "my-account-form"; ?>" id="customer_login">
 
 <?php endif; ?>
-	<div class="col-md-10 offset-md-1">
-		<div class="row">
+	<div class="col-md-10">
+		<div class="row align-items-center">
 			<div class="u-column1 col-6 image-holder">
 				<img class="img-fit" src="<?php echo get_stylesheet_directory_uri() . '/images/login.jpg'?>" alt="Login and register image">
 			</div>
@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 						<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 					</p>
 					
-					<button type="submit" class="woocommerce-button button woocommerce-form-login__submit btn btn-login" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+					<button type="submit" class="woocommerce-button button woocommerce-form-login__submit btn btn btn-primary btn-login" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
 					<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 					<p class="register-link"><span><?php echo pll__('Dont Have an Account?')?></span> 
@@ -76,8 +76,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 
-	<div class="col-md-10 offset-md-1">
-		<div class="row">
+	<div class="col-md-10">
+		<div class="row align-items-center">
 			<div class="u-column2 col-6 image-holder">
 				<img class="img-fit" src="<?php echo get_stylesheet_directory_uri() . '/images/login.jpg'?>" alt="Login and register image">
 			</div>
@@ -104,8 +104,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 						<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 							<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-							<input type="password" class="woocommerce-Input woocommerce-Input--text inpu
-							t-text" name="password" id="reg_password" autocomplete="new-password" />
+							<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
 						</p>
 
 					<?php else : ?>
@@ -117,7 +116,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					<?php do_action( 'woocommerce_register_form' ); ?>
 					<p class="woocommerce-form-row form-row">
 						<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-						<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit btn btn-login" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+						<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit btn btn-primary btn-login" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
 					</p>
 
 					<p class="register-link mb-50px"><span><?php echo pll__('Already have an account?')?></span> 

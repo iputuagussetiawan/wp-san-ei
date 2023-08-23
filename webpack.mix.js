@@ -3,6 +3,9 @@ const mix = require("laravel-mix");
 mix
   .js("source/js/layout.js", "assets/js/")
   .js("source/js/home.js", "assets/js/")
+  .js("source/js/login.js", "assets/js/")
+  .js("source/js/register.js", "assets/js/")
+  .js("source/js/myaccount.js", "assets/js/")
   .sass("source/scss/layout.scss", "assets/css/")
   .sass("source/scss/pages/home.scss", "assets/css/")
   .sass("source/scss/pages/archive-products.scss", "assets/css/")

@@ -37,11 +37,12 @@ a:hover {
 }
 
 .btn {
-  padding: 16px 16px;
-  font-size: 28px;
-  font-weight: 700;
+  padding: 12px;
+  font-size: 18px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  border-radius: 0px;
+  font-weight: 400;
 }
 @media only screen and (max-width: 1919.98px) {
   .btn {
@@ -64,22 +65,22 @@ a:hover {
   box-shadow: none;
 }
 
-.btn-primary {
+.btn.btn-primary {
   color: #ffffff;
-  background-color: #a8ccdf;
-  border-color: #a8ccdf;
+  background-color: #607D8B;
+  border-color: #607D8B;
 }
-.btn-primary:hover {
+.btn.btn-primary:hover {
   color: #ffffff;
-  background-color: #bde0f3;
-  border-color: #bde0f3;
+  background-color: #80a0b1;
+  border-color: #80a0b1;
 }
-.btn-primary:focus, .btn-primary:active, .btn-primary:first-child:active {
+.btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:first-child:active {
   color: #ffffff;
-  background-color: #a8ccdf;
-  border-color: #a8ccdf;
+  background-color: #607D8B;
+  border-color: #607D8B;
 }
-.btn-primary.disabled {
+.btn.btn-primary.disabled {
   color: #ffffff;
 }
 
@@ -160,6 +161,11 @@ a:hover {
   color: #ffffff;
 }
 
+.btn-login {
+  display: block;
+  width: 100%;
+}
+
 .form-check .form-check-label {
   font-weight: 500;
   font-size: 16px;
@@ -177,6 +183,7 @@ a:hover {
 //////////////// FORM SETUP ///////////////
 -----------------------------------------*/
 .form-control-custom,
+.form-control,
 .input-text {
   position: relative;
   width: 100%;
@@ -184,31 +191,33 @@ a:hover {
   border-radius: 0px;
   box-sizing: border-box;
   transition: 0.4s ease;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #ececec;
   background-color: transparent;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 42px;
+  font-size: 18px;
+  font-weight: 400;
   color: #232526;
   background-color: #ffffff;
 }
 .form-control-custom:focus,
+.form-control:focus,
 .input-text:focus {
-  border: 1px solid #a8ccdf;
+  border: 1px solid #80a0b1;
   box-shadow: none;
   outline: none;
   background-color: #ffffff;
 }
-.form-control-custom::-moz-placeholder, .input-text::-moz-placeholder {
+.form-control-custom::-moz-placeholder, .form-control::-moz-placeholder, .input-text::-moz-placeholder {
+  color: #E5E5E5;
   font-weight: 400;
-  color: #68686b;
 }
 .form-control-custom::placeholder,
+.form-control::placeholder,
 .input-text::placeholder {
+  color: #E5E5E5;
   font-weight: 400;
-  color: #68686b;
 }
 .form-control-custom.wpcf7-not-valid,
+.form-control.wpcf7-not-valid,
 .input-text.wpcf7-not-valid {
   padding-right: 42px;
   background: url("https://api.iconify.design/ion/alert-circle.svg?color=%23cb3a31") no-repeat center center/contain;
@@ -219,6 +228,7 @@ a:hover {
 }
 @media only screen and (max-width: 1919.98px) {
   .form-control-custom,
+  .form-control,
   .input-text {
     font-size: 1.5625vw;
     line-height: 1.7;
@@ -226,6 +236,7 @@ a:hover {
 }
 @media only screen and (max-width: 1599.98px) {
   .form-control-custom,
+  .form-control,
   .input-text {
     padding: 6px 14px;
     font-size: 14px;
