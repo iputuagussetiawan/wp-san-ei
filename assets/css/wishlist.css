@@ -1,0 +1,96 @@
+body {
+  position: relative;
+  font-family: "Kozuka Gothic Pro";
+  color: #29292A;
+  transition: 0.4s ease;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+a {
+  transition: 0.4s ease;
+  text-decoration: none;
+  color: #80a0b1;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.wishlist .wishlist-title-container {
+  display: flex;
+  justify-content: center;
+}
+.wishlist .wishlist-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 6.4px;
+  text-transform: uppercase;
+  color: #607D8B;
+}
+.wishlist .wishlist-title h2:hover {
+  background-color: transparent;
+}
+.wishlist .wishlist_table {
+  width: 100%;
+  margin-top: 24px;
+}
+.wishlist .wishlist_table th {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  /* identical to box height, or 194% */
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* Color 6 */
+  color: #29292A;
+  background-color: #eff2f3;
+}
+.wishlist .wishlist_table td {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  /* identical to box height, or 175% */
+  /* Color 3 */
+  color: #676A6C;
+}
+.wishlist .wishlist_table .product-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.wishlist .wishlist_table .product-name,
+.wishlist .wishlist_table .product-price,
+.wishlist .wishlist_table .product-stock-status {
+  text-align: left;
+}
+.wishlist .yith-wcwl-share {
+  display: none;
+}
+
+/*# sourceMappingURL=wishlist.css.map*/

@@ -1,9 +1,9 @@
 <?php
-/*   Template Name: Page MyAccount */
+/*   Template Name: Page Wishlist */
 get_header();
 ?>
 <main>
-    <section class="my-account section-padding">
+    <section class="wishlist section-padding">
         <div class="container">
             <?php
                 the_content()

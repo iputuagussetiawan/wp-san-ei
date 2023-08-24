@@ -46,6 +46,7 @@ body {
 a {
 	transition: 0.4s ease;
 	text-decoration: none;
+	color: color(blue,400);
 	&:hover {
 		text-decoration: none;
 	}

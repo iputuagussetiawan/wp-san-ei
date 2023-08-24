@@ -8,5 +8,7 @@
     "/assets/css/single-product.css": "/assets/css/single-product.css",
     "/assets/css/archive-products.css": "/assets/css/archive-products.css",
     "/assets/css/home.css": "/assets/css/home.css",
-    "/assets/css/layout.css": "/assets/css/layout.css"
+    "/assets/css/layout.css": "/assets/css/layout.css",
+    "/assets/css/wishlist.css": "/assets/css/wishlist.css",
+    "/assets/css/my-account.css": "/assets/css/my-account.css"
 }

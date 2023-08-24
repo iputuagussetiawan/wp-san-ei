@@ -26,12 +26,7 @@
     }
 
     &__input{
-        padding-right: 50px;
-        // border-right-color: transparent;
-        // &:focus{
-        //     border:1px solid color(gray,50);
-        //     border-right-color: transparent;
-        // }
+        padding-right: 50px !important; 
     }
 
     &__btn{

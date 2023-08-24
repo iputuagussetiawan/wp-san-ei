@@ -30,17 +30,14 @@
 				</div>
 			</div>
 			<nav class="navbar navbar-expand-lg  navbar-custom">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="
-						<?php if ($currentLang=='en') {?>
-							<?php echo get_option("siteurl"); ?>
-						<?php } elseif ($currentLang=='id') { ?>
-							<?php echo get_option("siteurl"); ?>/id
-						<?php } ?>
-					">
-						<img src="<?php echo get_stylesheet_directory_uri() . '/images/logo.svg'?>" alt="Brand Logo">
-					</a>
-				
+				<div class="container-fluid bg-white">
+					<div class="navbar-custom__logo-container">
+						<?php
+						if (function_exists('the_custom_logo')) {
+							the_custom_logo();
+						}
+						?>
+					</div>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="line"></span>
 						<span class="line"></span>

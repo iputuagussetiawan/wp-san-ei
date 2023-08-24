@@ -643,8 +643,8 @@ p.stars.selected a:not(.active)::before {
     left: -455px;
     transition: left .3s ease-out;
     flex-direction: row-reverse;
-    padding-left: 1em;
     background-color: #ffffff;
+    padding: 8px 16px;
 }
 
 .storefront-product-pagination a[rel=prev]:hover {
@@ -664,6 +664,7 @@ p.stars.selected a:not(.active)::before {
     transition: right .3s ease-in;
     padding-right: 1em;
     background-color: #ffffff;
+    padding: 8px 16px;
 }
 
 .storefront-product-pagination a[rel=next]:hover {

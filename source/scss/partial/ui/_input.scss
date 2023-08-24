@@ -21,7 +21,7 @@
 /*-----------------------------------------
 //////////////// FORM SETUP ///////////////
 -----------------------------------------*/
-
+select,
 .form-control-custom,
 .form-control,
 .input-text  {
@@ -70,13 +70,26 @@
 	}
 }
 
+select,
 .form-select {
-	background-image: url("../../../../images/heroicons_chevron-down.svg");
-	background-size: 32px 32px;
-
-	@media only screen and (max-width: 767.98px) {
-		background-size: 20px 20px;
-	}
+	background-image: url('https://api.iconify.design/carbon/chevron-down.svg') no-repeat center center / contain;
+	background-size: 16px 16px;
+	padding: 10px 20px;
+    padding-right: 40px;
+    border: 1px solid #ececec;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 
