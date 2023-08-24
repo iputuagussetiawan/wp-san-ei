@@ -4,8 +4,9 @@ import * as bootstrap from 'bootstrap';
 import Navbar from './modules/Navbar'
 const navbar=new Navbar();
 
-window.addEventListener("load", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
 	navbar.hoverDropdown();
+    navbar.events();
 });
 
 const searchToggle = document.querySelector('.search-toggle');

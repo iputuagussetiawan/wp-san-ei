@@ -510,6 +510,12 @@ select,
   text-transform: uppercase;
   color: #29292A;
 }
+@media only screen and (max-width: 1919.98px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 1.7;
+  }
+}
 
 .section-content {
   font-size: 18px;
@@ -517,6 +523,12 @@ select,
   font-weight: 400;
   line-height: 35px;
   color: #676A6C;
+}
+@media only screen and (max-width: 1919.98px) {
+  .section-content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .section-padding, .section-padding--medium, .section-padding--top, .section-padding--medium-top, .section-padding--bottom, .section-padding--medium-bottom {

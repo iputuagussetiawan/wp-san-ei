@@ -54,7 +54,7 @@
     padding: 0px;
     background-color: #ffffff;
     z-index: 20;
-    border-bottom: 1px solid color(gray,100);
+    // border-bottom: 1px solid color(gray,100);
 
     .navbar-desktop{
         background-color: #ffffff;
@@ -224,9 +224,12 @@
         z-index: 1000;
         border: none;
         outline: none;
+        padding: 0px;
+        width: 34px ;
 
         &:focus{
             outline: none;
+            box-shadow: none;
         }
     }
 
@@ -334,8 +337,11 @@
         }
     }
 }
+
+
 .navbar-brand{
-    padding: 9px 0px;
+    display: inline-block;
+    padding: 12px 0px;
     &__image,
     img{
         max-width: 138px;
@@ -345,14 +351,83 @@
     @media only screen and (max-width: 1919.98px) {
         &__image,
         img{
-            max-width: 110px;
+            max-width: 120px;
         }
     }
-    @media only screen and (max-width: 1199.98px) {
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 26px 0px;
         &__image,
         img{
-            max-width: 100px;
+            max-width: 107px;
         }
+    }
+}
+
+.mobile-nav{
+    display: none;
+    margin: 0px;
+    
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__list{
+        margin: 0px;
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        position: relative;
+    }
+
+    .nav-link,
+    &__link{
+        position: relative;
+        display: inline-block;
+        padding: 12px 14px;
+        cursor: pointer;
+    }
+    &__icon{
+        width: 25px;
+        height: 25px;
+    }
+    .mini-cart-count,
+    .wishlist-count{
+        position: absolute;
+        top: 8px;
+        right: 0px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        background-color: #607d8b;
+        color: #fff;
+        font-size: 10px;
+    }
+    .yith-wcwl-items-count{
+        height: 25px;
+    }
+    .yith-wcwl-icon{
+        width: 25px;
+        height: 25px;
+    }
+    .yith-wcwl-icon::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-image: url('../../images/icon/heart.svg');
+        background-size: 25px;
+        background-repeat: no-repeat;
+        filter: grayscale(0);
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        display: flex;
     }
 }
 

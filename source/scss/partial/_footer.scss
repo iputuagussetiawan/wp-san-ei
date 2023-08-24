@@ -72,6 +72,26 @@
         color:color(gray,300) ;
     }
 
+    @media only screen and (max-width: 1919.98px) {
+        &__grid{
+            padding-bottom: 80px;
+        }
+        &__logo-container{
+            margin-bottom: 50px;
+        }
+        &__info{
+            font-size: 16px;
+            line-height: 28px;
+        }
+        &__contact-link{
+            font-size: 16px;
+            line-height: 28px;
+        }
+        &__copyright-text{
+            font-size: 14px;
+        }
+    }
+
 }
 .footer-menu{
     display: grid;
@@ -90,5 +110,12 @@
         font-weight: 400;
         line-height: 35px;
         color: color(gray,400);
+    }
+
+    @media only screen and (max-width: 1919.98px) {
+        &__link{
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
 }
