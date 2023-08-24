@@ -10,7 +10,6 @@ mix
   .sass("source/scss/pages/home.scss", "assets/css/")
   .sass("source/scss/pages/archive-products.scss", "assets/css/")
   .sass("source/scss/pages/single-product.scss", "assets/css/")
-  .sass("source/scss/pages/woocommerce-custom.scss", "assets/css/")
   .sass("source/scss/pages/my-account.scss", "assets/css/")
   .sass("source/scss/pages/wishlist.scss", "assets/css/")
   .sourceMaps(true, "source-map");

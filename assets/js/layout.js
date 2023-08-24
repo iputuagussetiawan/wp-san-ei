@@ -13971,18 +13971,6 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 /***/ }),
 
-/***/ "./source/scss/pages/my-account.scss":
-/*!*******************************************!*\
-  !*** ./source/scss/pages/my-account.scss ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./source/scss/pages/wishlist.scss":
 /*!*****************************************!*\
   !*** ./source/scss/pages/wishlist.scss ***!
@@ -14043,10 +14031,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./source/scss/pages/woocommerce-custom.scss":
-/*!***************************************************!*\
-  !*** ./source/scss/pages/woocommerce-custom.scss ***!
-  \***************************************************/
+/***/ "./source/scss/pages/my-account.scss":
+/*!*******************************************!*\
+  !*** ./source/scss/pages/my-account.scss ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -14154,13 +14142,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/layout": 0,
-/******/ 			"assets/css/woocommerce-custom": 0,
+/******/ 			"assets/css/my-account": 0,
 /******/ 			"assets/css/single-product": 0,
 /******/ 			"assets/css/archive-products": 0,
 /******/ 			"assets/css/home": 0,
 /******/ 			"assets/css/layout": 0,
-/******/ 			"assets/css/wishlist": 0,
-/******/ 			"assets/css/my-account": 0
+/******/ 			"assets/css/wishlist": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -14210,14 +14197,13 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/js/layout.js")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/layout.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/pages/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/pages/archive-products.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/pages/single-product.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/pages/woocommerce-custom.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/pages/my-account.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/woocommerce-custom","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist","assets/css/my-account"], () => (__webpack_require__("./source/scss/pages/wishlist.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/js/layout.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/scss/layout.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/scss/pages/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/scss/pages/archive-products.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/scss/pages/single-product.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/scss/pages/my-account.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/my-account","assets/css/single-product","assets/css/archive-products","assets/css/home","assets/css/layout","assets/css/wishlist"], () => (__webpack_require__("./source/scss/pages/wishlist.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

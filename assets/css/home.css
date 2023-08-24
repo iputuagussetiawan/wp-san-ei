@@ -47,13 +47,7 @@ a:hover {
 }
 @media only screen and (max-width: 1919.98px) {
   .btn {
-    padding: 1.5625vw 3.125vw;
-    font-size: 1.45833vw;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .btn {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -236,17 +230,8 @@ select.wpcf7-not-valid,
   .form-control-custom,
   .form-control,
   .input-text {
-    font-size: 1.5625vw;
+    font-size: 16px;
     line-height: 1.7;
-  }
-}
-@media only screen and (max-width: 1599.98px) {
-  select,
-  .form-control-custom,
-  .form-control,
-  .input-text {
-    padding: 6px 14px;
-    font-size: 14px;
   }
 }
 
@@ -525,17 +510,6 @@ select,
   text-transform: uppercase;
   color: #29292A;
 }
-@media only screen and (max-width: 1919.98px) {
-  .section-title {
-    font-size: 3.645833vw;
-    line-height: 1.7;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .section-title {
-    font-size: 32px;
-  }
-}
 
 .section-content {
   font-size: 18px;
@@ -543,19 +517,6 @@ select,
   font-weight: 400;
   line-height: 35px;
   color: #676A6C;
-}
-@media only screen and (max-width: 1919.98px) {
-  .section-content {
-    margin-top: 1.666vw;
-    font-size: 1.5625vw;
-    line-height: 1.5;
-  }
-}
-@media only screen and (max-width: 1199.98px) {
-  .section-content {
-    font-size: 16px;
-    line-height: 1.8;
-  }
 }
 
 .section-padding, .section-padding--medium, .section-padding--top, .section-padding--medium-top, .section-padding--bottom, .section-padding--medium-bottom {
@@ -591,11 +552,6 @@ select,
   text-align: center;
   width: 100%;
   cursor: pointer;
-}
-@media (max-width: 1024.98px) {
-  .scroll-down {
-    bottom: 50px;
-  }
 }
 .scroll-down__desc {
   font-size: 18px;

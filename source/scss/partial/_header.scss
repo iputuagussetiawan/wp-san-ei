@@ -40,7 +40,7 @@
         }
     }
 
-    @media only screen and (max-width: 1399.98px) {
+    @media only screen and (max-width: 1919.98px) {
         &__holder{
             .nav-link{
                 padding: 10px 10px;
@@ -54,6 +54,7 @@
     padding: 0px;
     background-color: #ffffff;
     z-index: 20;
+    border-bottom: 1px solid color(gray,100);
 
     .navbar-desktop{
         background-color: #ffffff;
@@ -143,6 +144,10 @@
             .nav-link{
                 cursor: pointer;
                 padding: 26px 30px;
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 0.9px;
+                text-transform: uppercase;
                 &.close .nav-link__img-search{
                     opacity: 0;
                 }
@@ -194,20 +199,22 @@
                 background-repeat: no-repeat;
                 filter: grayscale(0);
             }
-            
-            &.catalog .nav-link{
+
+            &.catalog{
+                display: flex;
+                align-items: center;
                 background-color: color(blue,500);
-                color: #ffffff;
-                padding: 29px 30px;
-                font-size: 18px;
-                font-weight: 400;
-                letter-spacing: 0.9px;
-                text-transform: uppercase;
-                &::before{
-                    display: none;
-                }
+                transition: 0.4s ease;
+
                 &:hover{
                     background-color: color(blue,400);
+                }
+            }
+            
+            &.catalog .nav-link{
+                color: #ffffff;
+                &::before{
+                    display: none;
                 }
             }
         }
@@ -224,21 +231,77 @@
     }
 
     @media only screen and (max-width: 1919.98px) {
-        .navbar-nav{
-           
+        .navbar-nav.menu-left{
             .nav-item{
-                margin-right: 1.5625vw;
-                &:last-child{
-                    margin-right: 0px;
+                margin-left: 24px;
+                &:first-child{
+                    margin-left: 0px;
                 }
                 .nav-link{
-                    font-size: 1.45833vw;
+                    padding: 28px 0px;
+                    font-size: 16px;
+                }
+
+                
+            }
+        }
+        .navbar-nav.menu-right{
+            .nav-item{
+                .nav-link{
+                    padding: 20px 24px;
+                    font-size: 16px;
+
+                    &__img-search{
+                        width: 25px;
+                        height: 25px;
+                    }
+                    &__img-close{
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+                .mini-cart-count,
+                .wishlist-count{
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                }
+                .nav-link-icon{
+                    width: 25px;
+                    height: 25px;
+                }
+                .yith-wcwl-icon::before {
+                    width: 25px;
+                    height: 25px;
+                    background-size: 25px;
                 }
             }
         }
     }
 
+    @media only screen and (max-width: 1199.98px) {
+        .navbar-nav.menu-left{
+            .nav-item{
+                margin-left:16px;
+                .nav-link{
+                    padding: 28px 0px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .navbar-nav.menu-right{
+            .nav-item{
+                .nav-link{
+                    padding: 20px 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
     @media only screen and (max-width: 991.98px) {
+        .cart-wishlist-holder{
+            display: none;
+        }
         .navbar-collapse{
             transition: 0.1s linear;
         }
@@ -347,10 +410,7 @@
     }
 }
 
-
-
 .navbar .megamenu{ padding: 1rem; }
-
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
     .navbar .has-megamenu{position:static!important;}

@@ -1,4 +1,4 @@
-import '../scss/woocommerce-custom.scss';
+// import '../scss/woocommerce-custom.scss';
 
 var url = window.location.href;
 console.log(url);

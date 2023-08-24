@@ -4,11 +4,10 @@
     "/assets/js/login.js": "/assets/js/login.js",
     "/assets/js/register.js": "/assets/js/register.js",
     "/assets/js/myaccount.js": "/assets/js/myaccount.js",
-    "/assets/css/woocommerce-custom.css": "/assets/css/woocommerce-custom.css",
+    "/assets/css/my-account.css": "/assets/css/my-account.css",
     "/assets/css/single-product.css": "/assets/css/single-product.css",
     "/assets/css/archive-products.css": "/assets/css/archive-products.css",
     "/assets/css/home.css": "/assets/css/home.css",
     "/assets/css/layout.css": "/assets/css/layout.css",
-    "/assets/css/wishlist.css": "/assets/css/wishlist.css",
-    "/assets/css/my-account.css": "/assets/css/my-account.css"
+    "/assets/css/wishlist.css": "/assets/css/wishlist.css"
 }
