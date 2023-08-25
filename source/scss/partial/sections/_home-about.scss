@@ -8,11 +8,16 @@
         grid-template-columns: repeat(12,1fr);
         gap: 30px;
     }
-
     &__info-container{
         grid-column: 2/6;
     }
     &__image-container{
         grid-column: 7/-1;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__info-container{
+            grid-column: 1/6;
+        }
     }
 }

@@ -101,26 +101,50 @@
 				</div>
 			</div>
 		</div>
-		<!-- MINI CART -->
-		<!-- <div class="modal fade mini-cart-modal" id="mini-cart-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<div class="header-holder">
-							<h5 class="modal-title"><?php echo pll__('Shopping Cart');?></h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-					</div>
-					<div class="modal-body">
-						<div class="widget woocommerce widget_shopping_cart">
-							<div class="widget_shopping_cart_content">
-								<?php echo woocommerce_mini_cart() ?>
-							</div>
-						</div>
-					</div>
+		<div class="offcanvas offcanvas-end offcanvas-mobilemenu" tabindex="-1" id="offcanvasMobileMenu" aria-labelledby="offcanvasMobileMenuLabel">
+			<div class="offcanvas-header">
+				<h5 id="offcanvasMobileMenuLabel">Offcanvas right</h5>
+				<button type="button" class="btn-close text-reset offcanvas-mobilemenu__btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<div class="mobile-menu">
+					<?php 
+						wp_nav_menu(array(
+							'theme_location' => 'primary',
+							'depth'          => 3,
+							'container'      => 'false',
+							'menu_class'     => 'navbar-nav',
+							'fallback_cb' 	 => '__return_false',
+							'walker'         => new bootstrap_5_wp_nav_menu_walker()
+							)
+						);
+				
+						wp_nav_menu(array(
+							'theme_location' => 'top-nav',
+							'depth'          => 3,
+							'container'      => 'false',
+							'menu_class'     => 'navbar-nav top-nav-holder',
+							'fallback_cb' 	 => '__return_false',
+							'walker'         => new bootstrap_5_wp_nav_menu_walker()
+							)
+						);
+					
+						wp_nav_menu(array(
+							'theme_location' => 'secondary',
+							'depth'          => 3,
+							'container'      => 'false',
+							'menu_class'     => 'navbar-nav',
+							'fallback_cb' 	 => '__return_false',
+							'walker'         => new bootstrap_5_wp_nav_menu_walker()
+							)
+						);
+					?>
+				</div>
+				<div class="search-mobile">
+					<?php wc_get_template_part('product', 'searchform');?>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<!-- <div class="floating-wa">
 			<a href="https://api.whatsapp.com/send?phone=<?php if( have_rows('footer_whatsapp', 'option') ): ?>
 				<?php while( have_rows('footer_whatsapp', 'option') ): the_row(); ?>

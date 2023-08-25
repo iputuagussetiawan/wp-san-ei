@@ -2991,8 +2991,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -3004,7 +3005,8 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
-gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_2__.ScrollToPlugin);
 var Navbar = /*#__PURE__*/function () {
   function Navbar() {
     _classCallCheck(this, Navbar);
@@ -3017,6 +3019,9 @@ var Navbar = /*#__PURE__*/function () {
     this.scrollToTopBtn = document.querySelector(".button-gotop");
     this.lastScrollTop = 0;
     this.dropdowns = document.querySelectorAll(".dropdown");
+    this.myOffcanvasMobileMenu = document.getElementById('offcanvasMobileMenu');
+    this.bsOffcanvasMobileMenu = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Offcanvas(this.myOffcanvasMobileMenu);
+    this.btnMobileMenuClose = document.querySelector('.offcanvas-mobilemenu__btn-close');
   }
   // 2. events
   _createClass(Navbar, [{
@@ -3031,16 +3036,23 @@ var Navbar = /*#__PURE__*/function () {
         event.preventDefault();
         _this.burgerTime();
       });
+      this.btnMobileMenuClose.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.closeSideMenu();
+      });
       if (this.scrollToTopBtn) {
         this.scrollToTopBtn.addEventListener('click', function (event) {
           event.preventDefault();
-          gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
+          gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(window, {
             duration: 0.1,
             scrollTo: 0,
             ease: "power2.inOut"
           });
         });
       }
+      this.myOffcanvasMobileMenu.addEventListener('hidden.bs.offcanvas', function (event) {
+        _this.closeSideMenu();
+      });
     }
     // 3. methods (function, action...)
   }, {
@@ -3083,6 +3095,7 @@ var Navbar = /*#__PURE__*/function () {
       this.burgerMenu.classList.add("open");
       this.body.classList.add('no-scroll');
       this.isClosed = true;
+      this.bsOffcanvasMobileMenu.show();
     }
   }, {
     key: "closeSideMenu",
@@ -3091,6 +3104,7 @@ var Navbar = /*#__PURE__*/function () {
       this.burgerMenu.classList.add("closed");
       this.body.classList.remove('no-scroll');
       this.isClosed = false;
+      this.bsOffcanvasMobileMenu.hide();
     }
   }, {
     key: "hoverDropdown",
@@ -3145,7 +3159,7 @@ var Navbar = /*#__PURE__*/function () {
   }, {
     key: "scrollToSection",
     value: function scrollToSection(target) {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
+      gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(window, {
         duration: 0.1,
         scrollTo: target
       });

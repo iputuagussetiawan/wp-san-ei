@@ -12069,6 +12069,12 @@ a:hover {
     font-size: 14px;
   }
 }
+@media only screen and (max-width: 991.98px) {
+  .top-nav {
+    z-index: 20000001;
+    display: none;
+  }
+}
 
 .navbar-custom {
   width: 100%;
@@ -12294,6 +12300,9 @@ a:hover {
   }
 }
 @media only screen and (max-width: 991.98px) {
+  .navbar-custom {
+    z-index: 20000000;
+  }
   .navbar-custom .cart-wishlist-holder {
     display: none;
   }
@@ -12414,6 +12423,70 @@ a:hover {
   .mobile-nav {
     display: flex;
   }
+}
+
+.mobile-menu .navbar-nav .nav-item {
+  margin-bottom: 10px;
+}
+.mobile-menu .navbar-nav .nav-item.search {
+  display: none;
+}
+.mobile-menu .navbar-nav .nav-item.mini-cart {
+  display: none;
+}
+.mobile-menu .navbar-nav .nav-item.wishlist {
+  display: none;
+}
+.mobile-menu .navbar-nav .nav-item.catalog {
+  margin-bottom: 30px;
+  background-color: #607D8B;
+  transition: 0.4s ease;
+}
+.mobile-menu .navbar-nav .nav-item.catalog:hover {
+  background-color: #80a0b1;
+}
+.mobile-menu .navbar-nav .nav-item.catalog .nav-link {
+  color: #ffffff;
+  text-align: center;
+}
+.mobile-menu .navbar-nav .nav-item.catalog .nav-link::before {
+  display: none;
+}
+.mobile-menu .navbar-nav .nav-item.catalog .nav-link:hover {
+  color: #ffffff;
+}
+.mobile-menu .navbar-nav .nav-item .nav-link {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #676A6C;
+}
+.mobile-menu .navbar-nav .nav-item .nav-link:hover {
+  color: #80a0b1;
+}
+.mobile-menu .navbar-nav .nav-item .dropdown-menu {
+  padding: 0px 0px 0px 24px;
+  border: none;
+  border-radius: 0px;
+}
+.mobile-menu .navbar-nav .nav-item .dropdown-menu .nav-item {
+  margin-bottom: 0px;
+}
+.mobile-menu .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #676A6C;
+}
+.mobile-menu .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  color: #80a0b1;
+  background-color: transparent;
 }
 
 .megamenu__grid {
@@ -13405,6 +13478,11 @@ select,
   box-shadow: none;
   outline: none;
   border: transparent;
+}
+@media only screen and (max-width: 991.98px) {
+  .search-box {
+    padding: 0px;
+  }
 }
 
 .woocommerce-mini-cart {

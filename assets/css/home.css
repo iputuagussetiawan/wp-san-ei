@@ -723,6 +723,11 @@ select,
 .home-about__image-container {
   grid-column: 7/-1;
 }
+@media only screen and (max-width: 991.98px) {
+  .home-about__info-container {
+    grid-column: 1/6;
+  }
+}
 
 .card-product {
   position: relative;

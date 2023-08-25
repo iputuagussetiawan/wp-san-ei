@@ -1,6 +1,8 @@
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Offcanvas } from 'bootstrap';
 gsap.registerPlugin(ScrollToPlugin);
+
 class Navbar {
     constructor() {
         this.isClosed = false;
@@ -12,6 +14,10 @@ class Navbar {
         this.scrollToTopBtn=document.querySelector(".button-gotop");
         this.lastScrollTop = 0;
         this.dropdowns = document.querySelectorAll(".dropdown")
+        this.myOffcanvasMobileMenu = document.getElementById('offcanvasMobileMenu');
+        this.bsOffcanvasMobileMenu = new Offcanvas(this.myOffcanvasMobileMenu);
+        this.btnMobileMenuClose=document.querySelector('.offcanvas-mobilemenu__btn-close');
+
     }
     // 2. events
     events() {
@@ -23,12 +29,22 @@ class Navbar {
             event.preventDefault();
             this.burgerTime() 
         });
+        this.btnMobileMenuClose.addEventListener('click', (event)=>{  
+            event.preventDefault();
+            this.closeSideMenu()
+        });
+
+        
         if(this.scrollToTopBtn){
             this.scrollToTopBtn.addEventListener('click', (event)=>{  
                 event.preventDefault();
                 gsap.to(window, {duration: 0.1, scrollTo: 0,ease: "power2.inOut"});
             });
         }
+
+        this.myOffcanvasMobileMenu.addEventListener('hidden.bs.offcanvas', (event)=> {
+            this.closeSideMenu()
+        })
     }
     // 3. methods (function, action...)
     sticky(currentScrollPosition) {
@@ -66,12 +82,16 @@ class Navbar {
         this.burgerMenu.classList.add("open");
         this.body.classList.add('no-scroll');
         this.isClosed = true;
+
+        this.bsOffcanvasMobileMenu.show();
     }
     closeSideMenu(){
         this.burgerMenu.classList.remove("open");
         this.burgerMenu.classList.add("closed");
         this.body.classList.remove('no-scroll');
         this.isClosed  = false;
+
+        this.bsOffcanvasMobileMenu.hide();
     }
     hoverDropdown(){
         for (const dropdown of this.dropdowns) {
