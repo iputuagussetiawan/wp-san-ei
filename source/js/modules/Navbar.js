@@ -45,6 +45,7 @@ class Navbar {
         this.myOffcanvasMobileMenu.addEventListener('hidden.bs.offcanvas', (event)=> {
             this.closeSideMenu()
         })
+
     }
     // 3. methods (function, action...)
     sticky(currentScrollPosition) {

@@ -155,6 +155,18 @@ a:hover {
 .btn-standard--white:hover {
   color: #ffffff;
 }
+@media only screen and (max-width: 1399.98px) {
+  .btn-standard, .btn-standard--white {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .btn-standard, .btn-standard--white {
+    font-size: 16px;
+    line-height: 13px;
+  }
+}
 
 .btn-login {
   display: block;

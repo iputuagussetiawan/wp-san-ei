@@ -440,6 +440,7 @@
 .mobile-menu{
     .navbar-nav{
         .nav-item{
+            position: relative;
             margin-bottom: 10px;
             // &:last-child{
             //     margin-bottom: 0px;
@@ -473,6 +474,7 @@
                 }
             }
             .nav-link{
+                position: relative;
                 padding: 10px 20px;
                 font-size: 16px;
                 font-weight: 400;
@@ -486,14 +488,14 @@
                 }
             }
             .dropdown-menu{
-                padding:0px 0px 0px 24px;
+                padding:0px 0px 0px 42px;
                 border: none;
                 border-radius: 0px;
                 .nav-item{
                     margin-bottom: 0px;
                 }
                 .dropdown-item{
-                    padding: 10px 20px;
+                    padding: 10px 0px;
                     font-size: 16px;
                     font-weight: 400;
                     line-height: normal;
@@ -507,6 +509,10 @@
                     }
                 }
             }
+
+            .dropdown-menu.megamenu{
+                padding: 0px 0px 0px 20px;
+            }
         }
     }
 }
@@ -517,14 +523,21 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
     }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px 15px;
+        }
+    }
 }
 
-.megamenu-item{
+.megamenu-item {
     @include imageRatio(432,280);
     display: flex;
     align-items: center;
     justify-content: center;
-    megamenu-item__link{
+    &__link{
         position: relative;
         display: inline-block;
     }
@@ -558,10 +571,29 @@
         text-transform: uppercase;
         color: #ffffff;
         z-index: 2;
+        white-space: break-spaces;
     }
 
     &:hover &__image{
         transform: scale(1.2);
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__link{
+            padding: 0px;
+        }
+        &__title{
+            bottom: 20px;
+            left: 10px;
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__title{
+            left: 8px;
+            font-size: 12px;
+        }
     }
 }
 
