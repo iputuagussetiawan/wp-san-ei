@@ -1,0 +1,165 @@
+@use 'sass:math';
+@use '../_config.scss' as *;
+@use '../config/_reset.scss';
+
+.cart-page{
+    .cart-title{
+        margin-bottom: 120px;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 6.4px;
+        text-transform: uppercase;
+        color: color(blue,500);
+        text-align: center;
+    }
+    .woocommerce-message{
+        padding: 15px 20px;
+        background-color:rgba(96, 125, 139, 0.10);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 218.75%;
+    }
+    .woocommerce-cart-form{
+        margin-top: 30px;
+    }
+
+    .shop_table {
+        thead{
+            tr{
+                th{
+                    background-color:rgba(96, 125, 139, 0.10);
+                    padding: 24px;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 35px; /* 194.444% */
+                    letter-spacing: 0.9px;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+
+                th.product-subtotal{
+                    text-align: right;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+                border: 1px solid transparent;
+                td{
+                    vertical-align:middle;
+                    text-align: center;
+                    padding:8px 24px;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 175%;
+                    color: color(gray,400);
+                }
+                td.product-remove{
+                    width: 72px;
+                    .remove{
+                        &::before{
+                            content: '';
+                            background: url('https://api.iconify.design/ic/outline-close.svg') no-repeat center center / contain;
+                        }
+                    }
+                }
+                td.product-thumbnail,
+                td.product-quantity,
+                td.product-price,
+                td.product-subtotal{
+                    width: 250px;
+                }
+
+                td.product-subtotal{
+                    text-align: right;
+                }
+                td.coupon-holder{
+                    padding:30px 0px;
+                }
+                td.update-cart{
+                    text-align: right;
+                    padding:30px 0px;
+                }
+                
+            }
+
+            tr.coupon-holder-wrapper{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0px;
+                    height: 1px;
+                    background-color: #ECECEC;
+                }
+                
+            }
+        }
+        
+    }
+
+    .cart_totals {
+        padding: 40px;
+        border: 1px solid color(gray,50);
+
+        .cart_totals-title{
+            margin-bottom: 60px;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 3.6px;
+            text-transform: uppercase;
+        }
+
+        .shop_table{
+            margin-bottom: 40px;
+            width: 100%;
+            tr{
+                th{
+                    min-width: 150px;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 175%;
+                }
+
+                th.product-subtotal{
+                    text-align: right;
+                }
+            }
+            
+            tbody{
+                tr{
+                    border-bottom: 1px solid color(gray,50);
+                    td{
+                        vertical-align:middle;
+                        text-align: left;
+                        padding:24px 24px;
+
+                        bdi{
+                            font-weight: 500;
+                        }
+                    }
+                }
+                tr.order-total{
+                    color: color(blue,500);
+                    font-weight: 500;
+                    td{
+                        color: color(blue,500);
+                    }
+                }
+            }
+        }
+        .wc-proceed-to-checkout{
+            text-align: right;
+        }
+    }
+}

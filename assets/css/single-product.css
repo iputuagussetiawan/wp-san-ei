@@ -109,6 +109,27 @@
 .card-product:hover .card-product__image-container img {
   transform: scale(1.1);
 }
+@media only screen and (max-width: 1399.98px) {
+  .card-product__title {
+    font-size: 18px;
+  }
+  .card-product__price {
+    color: #607D8B;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 200%;
+  }
+  .card-product__price del {
+    padding-right: 10px;
+    color: rgba(96, 125, 139, 0.5);
+    font-size: 20px;
+  }
+  .card-product__on-sale {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
 
 @media (max-width: 767.98px) {
   .product-detail .woocommerce-product-gallery {
@@ -365,57 +386,6 @@
 }
 .product-detail .woocommerce-tabs ul.tabs li::after {
   display: none;
-}
-.product-detail .quantity {
-  margin-right: 10px;
-}
-.product-detail .quantity .form-control {
-  height: 70px;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-  border-left: none;
-  border-right: none;
-  text-align: center;
-  font-size: 20px;
-}
-.product-detail .quantity .form-control:focus {
-  box-shadow: none;
-}
-.product-detail .quantity .btn-minus,
-.product-detail .quantity .btn-plus {
-  width: 50px;
-  position: relative;
-}
-.product-detail .quantity .btn-minus::after,
-.product-detail .quantity .btn-plus::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.product-detail .quantity .btn-minus {
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-  border-left: 1px solid #ececec;
-  border-right: none;
-}
-.product-detail .quantity .btn-minus::after {
-  background: url("https://api.iconify.design/ic/round-minus.svg?color=black") no-repeat center center/contain;
-}
-.product-detail .quantity .btn-plus {
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-  border-left: none;
-  border-right: 1px solid #ececec;
-  border-radius: 0;
-}
-.product-detail .quantity .btn-plus::after {
-  background: url("https://api.iconify.design/ic/round-plus.svg?color=black") no-repeat center center/contain;
 }
 
 .woo-variation-swatches .wvs-style-squared.variable-items-wrapper .variable-item:not(.radio-variable-item) {

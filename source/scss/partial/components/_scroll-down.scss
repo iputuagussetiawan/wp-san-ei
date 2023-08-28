@@ -15,23 +15,32 @@
     }
     &__icon{
         height: 25px; 
-        animation: move 2s linear infinite;
+        animation: move 1.4s linear infinite;
         path{
             fill: #ffffff;
         }
     }
     @keyframes move {
         0% {
-            transform: translateY(10px);
+            transform: translateY(0px);
             opacity: 0;
         }
         50% {
-            transform: translateY(40px);
+            transform: translateY(20px);
             opacity: 1;
         }
         100% {
-            transform: translateY(80px);
+            transform: translateY(40px);
             opacity: 0;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__desc {
+            font-size: 16px;
+        }
+        &__icon{
+            height: 20px; 
         }
     }
 }

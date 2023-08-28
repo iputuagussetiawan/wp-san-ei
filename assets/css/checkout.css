@@ -1,0 +1,40 @@
+body {
+  position: relative;
+  font-family: "Kozuka Gothic Pro";
+  color: #29292A;
+  transition: 0.4s ease;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+a {
+  transition: 0.4s ease;
+  text-decoration: none;
+  color: #80a0b1;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=checkout.css.map*/

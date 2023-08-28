@@ -46,4 +46,27 @@
     &:hover &__image-container img{
         transform: scale(1.1);
     }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__title{
+            font-size: 18px;
+        }
+        &__price{
+            color: color(blue,500);
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 200%;
+    
+            del{
+                padding-right: 10px;
+                color: rgba(96, 125, 139, 0.50);
+                font-size: 20px;
+            }
+        }
+        &__on-sale{
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
 }

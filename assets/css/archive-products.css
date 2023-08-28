@@ -109,6 +109,27 @@
 .card-product:hover .card-product__image-container img {
   transform: scale(1.1);
 }
+@media only screen and (max-width: 1399.98px) {
+  .card-product__title {
+    font-size: 18px;
+  }
+  .card-product__price {
+    color: #607D8B;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 200%;
+  }
+  .card-product__price del {
+    padding-right: 10px;
+    color: rgba(96, 125, 139, 0.5);
+    font-size: 20px;
+  }
+  .card-product__on-sale {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
 
 /*
 ========================

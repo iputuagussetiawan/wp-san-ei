@@ -11,6 +11,7 @@
         margin-bottom: 60px;
     }
     &__grid{
+        margin-bottom: 32px;
         display: grid;
         grid-template-columns: repeat(12,1fr);
         gap: 30px;
@@ -35,6 +36,57 @@
         }
         .card-category:nth-child(7n+7){
             grid-column: 10/-1;
+        }
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__header{
+            margin-bottom: 50px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            gap: 16px;
+        }
+        &__header{
+            margin-bottom: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            grid-template-columns: repeat(2,1fr);
+            .card-category:nth-child(7n+1){
+                grid-column: unset;
+            }
+            .card-category:nth-child(7n+2){
+                grid-column: unset;
+            }
+            .card-category:nth-child(7n+3){
+                grid-column: unset;
+            }
+            .card-category:nth-child(7n+4){
+                grid-column: unset;
+            }
+            .card-category:nth-child(7n+5){
+                grid-column: unset;
+            }
+            .card-category:nth-child(7n+6){
+                grid-column: unset;
+            }
+            .card-category:nth-child(7n+7){
+                grid-column: unset;
+            }
+            .card-category:last-child{
+                grid-column: span 2;
+            }
+        }
+
+        &__action{
+            display: none;
         }
     }
 }

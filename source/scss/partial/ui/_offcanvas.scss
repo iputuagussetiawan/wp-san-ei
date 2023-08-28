@@ -2,7 +2,7 @@
 @use '../../_config.scss' as *;
 
 .offcanvas.offcanvas-end{
-    border-left: 1px solid transparent;
+    border-left: 1px solid #ffffff;
     width: 550px;
     @media only screen and (max-width: 767.98px) {
         width: 100%;
@@ -18,5 +18,11 @@
         letter-spacing: 1.4px;
         text-transform: uppercase;  
         color: color(blue,500);
+    }
+}
+
+.offcanvas-mobilemenu{
+    .offcanvas-body{
+        padding: 64px 3.020833vw;
     }
 }

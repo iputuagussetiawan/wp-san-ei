@@ -103,7 +103,7 @@
 		</div>
 		<div class="offcanvas offcanvas-end offcanvas-mobilemenu" tabindex="-1" id="offcanvasMobileMenu" aria-labelledby="offcanvasMobileMenuLabel">
 			<div class="offcanvas-header">
-				<h5 id="offcanvasMobileMenuLabel">Offcanvas right</h5>
+				<h5 id="offcanvasMobileMenuLabel"></h5>
 				<button type="button" class="btn-close text-reset offcanvas-mobilemenu__btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
 			<div class="offcanvas-body">

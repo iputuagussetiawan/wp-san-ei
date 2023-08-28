@@ -32,6 +32,10 @@ function script_enqueue() {
         //wp_enqueue_script('wishlist', get_stylesheet_directory_uri() . '/assets/js/wishlist.js', array(), $themeVersion, true);
     }
 
+	if (is_page_template('page-cart.php')) {
+        wp_enqueue_style('cart', get_stylesheet_directory_uri() . '/assets/css/cart.css', array(), $themeVersion, 'all');
+    }
+
   	// // ABOUT PAGE
   	// if( is_page(array('design', 'disain', 'system', 'sistem', 'process-qc', 'proses-kualitas-kontrol', 'public-good', 'barang-publik', 'progressive-market', 'pasar-progresif', 'philosophy', 'filosofi') ) ){
 	//     wp_enqueue_style('about-us', get_stylesheet_directory_uri().'/dist/about-us.css', array(), '1.0.0', 'all');

@@ -9,5 +9,7 @@
     "/assets/css/archive-products.css": "/assets/css/archive-products.css",
     "/assets/css/home.css": "/assets/css/home.css",
     "/assets/css/layout.css": "/assets/css/layout.css",
+    "/assets/css/checkout.css": "/assets/css/checkout.css",
+    "/assets/css/cart.css": "/assets/css/cart.css",
     "/assets/css/wishlist.css": "/assets/css/wishlist.css"
 }

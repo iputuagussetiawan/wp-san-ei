@@ -26,4 +26,11 @@
     &__icon{
         transform: rotate(90deg);
     }
+
+    @media only screen and (max-width: 991.98px) {
+        right: -54px;
+    }
+    @media only screen and (max-width: 767.98px) {
+        right: -72px;
+    }
 }

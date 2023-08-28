@@ -11,4 +11,28 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
     }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__header{
+            margin-bottom: 50px;
+        }
+        &__grid{
+            gap: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__header{
+            margin-bottom: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }
