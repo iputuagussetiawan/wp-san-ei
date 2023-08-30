@@ -6,7 +6,7 @@ function script_enqueue() {
 	/* Css */
 	wp_enqueue_style('layout', get_stylesheet_directory_uri().'/assets/css/layout.css', array(), $themeVersion, 'all');
 	wp_enqueue_script('layout', get_stylesheet_directory_uri().'/assets/js/layout.js', array(), $themeVersion, true);
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+	// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
 
 
   	//CSS JS FOR HOME
@@ -34,6 +34,10 @@ function script_enqueue() {
 
 	if (is_page_template('page-cart.php')) {
         wp_enqueue_style('cart', get_stylesheet_directory_uri() . '/assets/css/cart.css', array(), $themeVersion, 'all');
+    }
+
+	if (is_page_template('page-checkout.php')) {
+        wp_enqueue_style('checkout', get_stylesheet_directory_uri() . '/assets/css/checkout.css', array(), $themeVersion, 'all');
     }
 
   	// // ABOUT PAGE

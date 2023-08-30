@@ -22,7 +22,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 }
 
 ?>
-<h1 class="order-received section-title"><?php echo pll__('Order Received')?></h1>
+<h1 class="order-received page-title"><?php echo pll__('Order Received')?></h1>
 <div class="woocommerce-form-coupon-toggle">
 	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Click here to enter your code', 'woocommerce' ) . '</a>' ), 'notice' ); ?>
 </div>
@@ -31,9 +31,9 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'woocommerce' ); ?></p>
 
-    <div class="coupon input-group">
+    <div class="coupon input-group mb-4 mb-md-5">
         <input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
-        <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+        <button type="submit" class="button btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
     </div>
 
 	<div class="clear"></div>

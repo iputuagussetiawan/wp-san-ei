@@ -25,6 +25,24 @@
     .woocommerce-cart-form{
         margin-top: 30px;
     }
+    .woocommerce-shipping-totals{
+        .accordion-button{
+            background-color: #ffffff;
+            box-shadow: none;
+            outline: none;
+            &:active{
+                box-shadow: none;
+                outline: none;
+            }
+            img{
+                max-width: 50px;
+            }
+        }
+    }
+    .woocommerce-shipping-methods{
+        list-style: none;
+        padding: 0px;
+    }
 
     .shop_table {
         thead{

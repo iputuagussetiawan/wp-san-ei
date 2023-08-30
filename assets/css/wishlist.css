@@ -94,6 +94,9 @@ a:hover {
 }
 @media only screen and (max-width: 991.98px) {
   .wishlist .wishlist_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
     padding: 0px;
   }
   .wishlist .wishlist_table thead {
@@ -101,14 +104,82 @@ a:hover {
   }
   .wishlist .wishlist_table li {
     display: block;
+    margin-bottom: 32px;
+  }
+  .wishlist .wishlist_table.mobile li .item-wrapper .item-details {
+    width: 100%;
+  }
+  .wishlist .wishlist_table.mobile li .item-wrapper .product-thumbnail {
+    display: inline-block;
+    max-width: 180px;
+    margin-right: 0px;
+    margin-bottom: 32px;
+  }
+  .wishlist .wishlist_table.mobile li .item-wrapper .product-thumbnail img {
+    width: 180px;
+    height: 180px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .wishlist .wishlist_table.mobile li .item-wrapper {
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .wishlist .wishlist_table.images_grid li .item-details table.item-details-table,
+  .wishlist .wishlist_table.mobile li .item-details table.item-details-table,
+  .wishlist .wishlist_table.mobile li table.additional-info,
+  .wishlist .wishlist_table.modern_grid li .item-details table.item-details-table {
+    margin-bottom: 0px;
+  }
+  .wishlist .wishlist_table.images_grid li .item-details table.item-details-table td.label,
+  .wishlist .wishlist_table.mobile li .item-details table.item-details-table td.label,
+  .wishlist .wishlist_table.mobile li table.additional-info td.label,
+  .wishlist .wishlist_table.modern_grid li .item-details table.item-details-table td.label {
+    width: 90px;
+  }
+  .wishlist .wishlist_table.images_grid li .item-details table.item-details-table td,
+  .wishlist .wishlist_table.mobile li .item-details table.item-details-table td,
+  .wishlist .wishlist_table.mobile li table.additional-info td,
+  .wishlist .wishlist_table.modern_grid li .item-details table.item-details-table td {
+    border: none;
+    font-size: 18px;
+  }
+  .wishlist .wishlist-in-stock {
+    color: #6FCF97 !important;
+  }
+  .wishlist .wishlist_table .product-add-to-cart a {
+    display: block !important;
+    margin: 0 auto 5px !important;
+    text-align: center;
+    padding: 14px 30px;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #607D8B;
+    transition: 0.4s ease;
+  }
+  .wishlist .wishlist_table .product-add-to-cart a:hover {
+    background-color: #80a0b1;
+  }
+  .wishlist .wishlist_table.mobile li .additional-info-wrapper .product-remove {
+    text-align: center;
+  }
+  .wishlist .wishlist_table.mobile li .additional-info-wrapper .product-remove a {
+    position: relative;
+    color: #EB5757;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .wishlist .wishlist_table {
+    grid-template-columns: 1fr;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .wishlist .wishlist_table.mobile li .item-wrapper .product-thumbnail {
+    margin: 0px auto 24px auto;
     display: inline-block;
     width: 100%;
     max-width: 100%;
-    margin-right: 0px;
   }
   .wishlist .wishlist_table.mobile li .item-wrapper .product-thumbnail img {
     width: 100%;
@@ -118,6 +189,7 @@ a:hover {
   }
   .wishlist .wishlist_table.mobile li .item-wrapper .item-details {
     width: 100%;
+    margin-bottom: 8px;
   }
   .wishlist .wishlist_table.mobile li .item-wrapper {
     width: 100%;
@@ -145,16 +217,6 @@ a:hover {
   .wishlist .wishlist_table.mobile li .additional-info-wrapper .product-add-to-cart {
     margin-top: 24px;
   }
-  .wishlist .wishlist_table .product-add-to-cart a {
-    display: block !important;
-    margin: 0 auto 5px !important;
-    text-align: center;
-    padding: 14px 30px;
-    font-size: 16px;
-    color: #ffffff;
-    text-transform: uppercase;
-    background-color: #607D8B;
-  }
   .wishlist .wishlist_table .product-name {
     margin-bottom: 10px;
     width: 100%;
@@ -168,9 +230,6 @@ a:hover {
   }
   .wishlist .wishlist_table .product-name a {
     color: #29292A;
-  }
-  .wishlist .wishlist_table .wishlist-in-stock {
-    color: #6FCF97 !important;
   }
 }
 

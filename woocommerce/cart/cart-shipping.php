@@ -48,19 +48,19 @@ $calculator_text          = '';
 		</div>
 
 		<div class="accordion" id="accordionExample">
-		<?php $shippingMethods = build_shipping_method($available_methods); ?>
-		<?php foreach($shippingMethods as $code => $shippingMethod) : ?>
-			<?php if (!empty($shippingMethod['data']) > 0) : ?>
+			<?php $shippingMethods = build_shipping_method($available_methods); ?>
+			<?php foreach($shippingMethods as $code => $shippingMethod) : ?>
+				<?php if (!empty($shippingMethod['data']) > 0) : ?>
 				<div class="accordion-item">
-			      	<h2 class="accordion-header" id="headingOne">
-				        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $code ?>" aria-expanded="true" aria-controls="collapse<?php echo $code ?>">
-				          <img src="<?php echo $shippingMethod['image'] ?>">
-				        </button>
-			      	</h2>
-				    <div id="collapse<?php echo $code ?>" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-				      	<div class="accordion-body">
-				        	<ul id="shipping_method" class="woocommerce-shipping-methods">
-				        		<?php foreach ( $shippingMethod['data'] as $method ) : ?>
+					<h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $code ?>" aria-expanded="true" aria-controls="collapse<?php echo $code ?>">
+							<img src="<?php echo $shippingMethod['image'] ?>">
+						</button>
+					</h2>
+					<div id="collapse<?php echo $code ?>" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="accordion-body">
+							<ul id="shipping_method" class="woocommerce-shipping-methods">
+								<?php foreach ( $shippingMethod['data'] as $method ) : ?>
 									<li>
 										<?php
 										printf( '<input type="radio" name="shipping_method[%1$d]" data-index="%1$d" id="shipping_method_%1$d_%2$s" value="%3$s" class="shipping_method" %4$s />', $index, esc_attr( sanitize_title( $method->id ) ), esc_attr( $method->id ), checked( $method->id, $chosen_method, false ) ); // WPCS: XSS ok.
@@ -73,10 +73,10 @@ $calculator_text          = '';
 										?>
 									</li>
 								<?php endforeach; ?>
-				        	</ul>
-				      	</div>
-				    </div>
-			  	</div>
+							</ul>
+						</div>
+					</div>
+				</div>
 			<?php endif;?>
 		<?php endforeach;?>
 		</div>

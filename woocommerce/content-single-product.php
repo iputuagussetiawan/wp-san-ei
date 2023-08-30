@@ -35,7 +35,7 @@ if ( post_password_required() ) {
 // print_r($product);
 // echo '</pre>';
 ?>
-<section class="product-detail">
+<section class="product-detail section-padding">
 	<div class="container">
 		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 			<div class="row">

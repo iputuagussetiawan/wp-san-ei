@@ -59,6 +59,22 @@ a:hover {
 .cart-page .woocommerce-cart-form {
   margin-top: 30px;
 }
+.cart-page .woocommerce-shipping-totals .accordion-button {
+  background-color: #ffffff;
+  box-shadow: none;
+  outline: none;
+}
+.cart-page .woocommerce-shipping-totals .accordion-button:active {
+  box-shadow: none;
+  outline: none;
+}
+.cart-page .woocommerce-shipping-totals .accordion-button img {
+  max-width: 50px;
+}
+.cart-page .woocommerce-shipping-methods {
+  list-style: none;
+  padding: 0px;
+}
 .cart-page .shop_table thead tr th {
   background-color: rgba(96, 125, 139, 0.1);
   padding: 24px;

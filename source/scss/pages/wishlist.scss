@@ -6,7 +6,6 @@
         display:flex;
         justify-content: center;
     }
-
     .wishlist-title{
         display:flex;
         justify-content: center;
@@ -71,9 +70,11 @@
     .yith-wcwl-share{
         display: none;
     }
-
     @media only screen and (max-width: 991.98px) {
         .wishlist_table{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
             padding: 0px;
             thead{
                 display: none;
@@ -81,17 +82,97 @@
 
             li{
                 display: block;
+                margin-bottom: 32px;
+            }
+        }
+        .wishlist_table.mobile li .item-wrapper .item-details {
+            width: 100%;
+        }
+        .wishlist_table.mobile li .item-wrapper .product-thumbnail {
+            display: inline-block;
+            max-width: 180px;
+            margin-right: 0px;
+            margin-bottom: 32px;
+
+            img{
+                width: 180px;
+                height: 180px;
+                object-fit: cover;
             }
         }
 
+        .wishlist_table.mobile li .item-wrapper {
+            margin-bottom: 0px;
+            width: 100%;
+        }
+
+        .wishlist_table.images_grid li .item-details table.item-details-table, 
+        .wishlist_table.mobile li .item-details table.item-details-table, 
+        .wishlist_table.mobile li table.additional-info, 
+        .wishlist_table.modern_grid li .item-details table.item-details-table{
+            margin-bottom: 0px;
+        }
+
+        .wishlist_table.images_grid li .item-details table.item-details-table td.label, 
+        .wishlist_table.mobile li .item-details table.item-details-table td.label, 
+        .wishlist_table.mobile li table.additional-info td.label, 
+        .wishlist_table.modern_grid li .item-details table.item-details-table td.label{
+            width: 90px;
+        }
+
+        .wishlist_table.images_grid li .item-details table.item-details-table td, 
+        .wishlist_table.mobile li .item-details table.item-details-table td, 
+        .wishlist_table.mobile li table.additional-info td, 
+        .wishlist_table.modern_grid li .item-details table.item-details-table td {
+            border: none;
+            font-size:18px;
+        }
+
+        .wishlist-in-stock{
+            color: #6FCF97 !important;
+        }
+
+        .wishlist_table .product-add-to-cart a {
+            display: block!important;
+            margin: 0 auto 5px!important;
+            text-align: center;
+            padding: 14px 30px;
+            font-size: 16px;
+            color: #ffffff;
+            text-transform: uppercase;
+            background-color: color(blue,500);
+            transition: 0.4s ease;
+
+            &:hover{
+                background-color: color(blue,400);
+            }
+            
+        }
+        .wishlist_table.mobile li .additional-info-wrapper .product-remove {
+            text-align: center;
+            a{
+                position: relative;
+                color: #EB5757;
+            }
+            
+        }
+        
+        
+
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .wishlist_table{
+            grid-template-columns: 1fr;
+        }
     }
 
     @media only screen and (max-width: 575.98px) {
         .wishlist_table.mobile li .item-wrapper .product-thumbnail {
+            margin: 0px auto 24px auto;
             display: inline-block;
             width: 100%;
             max-width: 100%;
-            margin-right: 0px;
             img{
                 width: 100%;
                 height: auto;
@@ -101,6 +182,7 @@
 
         .wishlist_table.mobile li .item-wrapper .item-details {
             width: 100%;
+            margin-bottom: 8px;
         }
 
         .wishlist_table.mobile li .item-wrapper {
@@ -133,20 +215,7 @@
             margin-top: 24px;
         }
 
-        .wishlist_table .product-add-to-cart a {
-            display: block!important;
-            margin: 0 auto 5px!important;
-            text-align: center;
-            padding: 14px 30px;
-            font-size: 16px;
-            color: #ffffff;
-            text-transform: uppercase;
-            background-color: color(blue,500);
-            
-        }
-
-        
-
+       
         .wishlist_table{
             .product-name{
                 margin-bottom: 10px;
@@ -163,10 +232,7 @@
                 }
             }
 
-            .wishlist-in-stock{
-                color: #6FCF97 !important;
-            }
+           
         }
     }
-
 }

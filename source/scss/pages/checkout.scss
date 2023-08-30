@@ -1,3 +1,120 @@
 @use 'sass:math';
 @use '../_config.scss' as *;
 @use '../config/_reset.scss';
+
+
+.checkout{
+
+    .page-title{
+        margin-bottom: 120px;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 6.4px;
+        text-transform: uppercase;
+        text-align: center;
+        color: color(blue,500);
+    }
+
+    .woocommerce-checkout-review-order{
+        .section-title{
+            margin-bottom: 40px;
+        }
+        margin-top: 60px;
+        padding: 40px;
+        border: 1px solid color(gray,50);
+    }
+
+    .woocommerce-checkout-review-order-table{
+        width: 100%;
+        font-size: 20px;
+
+        th,td{
+            padding: 20px 0px;
+        }
+
+        tr{
+            border-bottom: 1px solid color(gray,50);
+        }
+
+        .product-total{
+            text-align: right;
+        }
+
+        tfoot{
+
+            tr.cart-subtotal,
+            tr.shipping,
+            tr.order-total{
+                td{
+                    text-align: right;
+                }
+            }
+
+        }
+    }
+
+    .woocommerce-checkout-payment{
+        margin-top: 60px;
+        .wc_payment_methods{
+            padding: 0px;
+            list-style: none;
+        }
+    }
+    .woocommerce-shipping-totals{
+        .accordion{
+            max-width: 450px;
+            margin-left: auto;
+
+        }
+        .accordion-button{
+            background-color: #ffffff;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+            img{
+                max-width: 50px;
+            }
+        }
+        .woocommerce-shipping-methods{
+            padding: 0px;
+            list-style: none;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .page-title{
+            margin-bottom: 100px;
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: 3.6px;
+        }
+
+        .woocommerce-checkout-review-order{
+            .section-title{
+                margin-bottom: 32px;
+            }
+            margin-top: 42px;
+            padding: 20px;
+        }
+
+        .woocommerce-checkout-review-order-table{
+            font-size: 16px;
+        }
+
+        .place-order{
+            .button 
+            {
+                display: block;
+                width: 100%;
+            }
+        }
+
+
+
+    }
+
+    
+}
