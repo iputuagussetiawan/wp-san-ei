@@ -293,7 +293,6 @@ select,
 }
 
 .quantity .form-control {
-  height: 70px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
   border-left: none;

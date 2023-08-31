@@ -84,7 +84,7 @@
         line-height: 72px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: #29292A;
+        color: color(black,100);
     }
     .woocommerce-variation-add-to-cart{
         display: flex;
@@ -122,8 +122,8 @@
         .woocommerce-Tabs-panel{
             h2{
                 font-weight: 500;
-                font-size: 36px;
-                line-height: 72px;
+                font-size: 32px;
+                line-height: 1.5;
                 letter-spacing: 0.1em;
                 text-transform: uppercase;
                 color: #29292A;
@@ -238,12 +238,10 @@
             background-color: #f8f8f8;
         }
     }
-
     .yith-wcwl-add-to-wishlist {
         margin-top: 32px;
         margin-bottom: 32px;
     }
-
     .variations{
         margin-bottom: 32px;
     }
@@ -276,7 +274,6 @@
             }
         }
     }
-
     .quantity {
 		width: 35%;
 		margin-right: 10px;
@@ -285,20 +282,18 @@
             margin-left: 0!important;
         } 
 
-        .form-control{
-            height: 70px;
-        }
+        // .form-control{
+        //     height: 70px;
+        // }
 	}
-
     .single_add_to_cart_button {
 		width: auto;
-		border: none;
+		padding: 12px 30px;
+        border: none;
 		background-color: color(blue,500);
 		font-size: 18px;
 		color:#ffffff;
 		text-transform: uppercase;
-		padding-left: 30px;
-		padding-right: 30px;
         transition: 0.4s ease;
         &:hover{
             background-color: color(blue,400);
@@ -310,6 +305,12 @@
 		}
 	}
 
+    @media only screen and (max-width: 1399.98px) {
+        .product_title{
+            font-size: 32px;
+            line-height: 1.5;
+        }
+    }
     @media (max-width: 1199.98px) {
         .single_add_to_cart_button{
             width: 50%;
@@ -323,19 +324,22 @@
         
     }
     @media (max-width: 991.98px) {
+        .yith-wcwl-add-to-wishlist {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .single_add_to_wishlist,
+        .yith-wcwl-add-button a{
+            font-size: 16px;
+            line-height: 1.5;
+        }
         .single_add_to_cart_button{
-            width: 92.5%;
-            margin-left: 11px;
-            margin-top: 10px;
+            width:100%;
         }
-
         .quantity {
+            margin-bottom: 16px;
             width: 100%;
-            .form-control{
-                height: 50px;
-            }
         }
-
         .product_title{
             font-size: 30px;
             line-height: 1.5;
@@ -344,8 +348,8 @@
     }
     @media (max-width: 767.98px) {
         .woocommerce-product-gallery {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
             .slick-arrow {
                 display: none!important;
             }
@@ -360,6 +364,7 @@
         }
 
         .quantity {
+            margin-bottom: 0px;
             width: 50%;
         }
 
@@ -377,17 +382,34 @@
             font-size: 20px;
         }
     }
-    @media (max-width: 320.98px) {
+    @media (max-width: 575.98px) {
+        .woocommerce-tabs{
+            .tabs{
+                flex-direction: column;
+
+                li{
+                    margin-right: 0px;
+                }
+            }
+        }
         .single_add_to_cart_button{
-            width: 92.5%;
-            margin-left: 11px;
-            margin-top: 10px;
+            width: 50%;
+        }
+        .quantity {
+            width: 50%;
+        }
+        
+    }
+
+    @media only screen and (max-width: 380px) {
+        .single_add_to_cart_button{
+            width: 100%;
         }
 
         .quantity {
+            margin-bottom: 14px;
             width: 100%;
         }
-        
     }
 }
 .added_to_cart.wc-forward {
@@ -505,7 +527,6 @@ p.stars {
         opacity: 1
     }
 }
-
 .comment-reply-title{
     font-weight: 500;
     font-size: 36px;
@@ -514,7 +535,6 @@ p.stars {
     text-transform: uppercase;
     color: #29292A;
 }
-
 .commentlist{
     list-style: none;
     padding: 0px;
@@ -536,11 +556,9 @@ p.stars {
         opacity: 1;
     }
 }
-
 .comment-text{
     padding-left: 16px;
 }
-
 .comment-respond{
     .submit{
         display: inline-block;
@@ -596,6 +614,7 @@ p.stars {
         flex-direction: row-reverse;
         background-color: #ffffff;
         padding: 8px 16px;
+        z-index: 1;
     }
 
     a[rel=prev]:hover{
@@ -616,6 +635,7 @@ p.stars {
         padding-right: 1em;
         background-color: #ffffff;
         padding: 8px 16px;
+        z-index: 1;
     }
     a[rel=next]:hover{
         right: 0

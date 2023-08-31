@@ -13001,7 +13001,6 @@ select,
 }
 
 .quantity .form-control {
-  height: 70px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
   border-left: none;
@@ -13472,7 +13471,7 @@ input[type=checkbox]:checked:after {
 }
 .burger .line1 {
   stroke-dasharray: 60 207;
-  stroke-width: 5;
+  stroke-width: 4;
 }
 .burger .line2 {
   stroke-dasharray: 60 60;
@@ -13480,7 +13479,7 @@ input[type=checkbox]:checked:after {
 }
 .burger .line3 {
   stroke-dasharray: 35 207;
-  stroke-width: 5;
+  stroke-width: 4;
 }
 .burger.open .line1 {
   stroke-dasharray: 90 207;
@@ -13776,8 +13775,8 @@ input[type=checkbox]:checked:after {
 }
 .woocommerce-mini-cart-item .remove_from_cart_button {
   position: absolute;
-  top: 20px;
-  left: 0px;
+  top: 12px;
+  right: 0px;
 }
 .woocommerce-mini-cart-item img {
   max-width: 100px;
@@ -13788,6 +13787,7 @@ input[type=checkbox]:checked:after {
 }
 .woocommerce-mini-cart-item__inner {
   display: flex;
+  align-items: center;
   text-decoration: none;
 }
 .woocommerce-mini-cart-item__info {
