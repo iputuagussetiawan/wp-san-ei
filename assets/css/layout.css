@@ -13945,5 +13945,8 @@ td.xoo-cp-remove .xoo-cp-remove-pd:hover {
   font-style: normal;
   font-display: swap;
 }
+.woocommerce-error {
+  color: red;
+}
 
 /*# sourceMappingURL=layout.css.map*/
