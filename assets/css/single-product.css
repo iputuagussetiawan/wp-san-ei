@@ -247,6 +247,7 @@
   box-shadow: none;
 }
 .product-detail .product_meta {
+  margin-bottom: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid #CECECE;
