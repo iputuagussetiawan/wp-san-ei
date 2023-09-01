@@ -69,7 +69,3 @@ function wh_addressStreetValidateCheckoutFields() {
     }
 }
 
-// function add_something() {
-//     echo 'hello there';
-// }
-// add_action('woocommerce_checkout_order_review','add_something');
