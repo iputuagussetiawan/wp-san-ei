@@ -68,3 +68,8 @@ function wh_addressStreetValidateCheckoutFields() {
         wc_add_notice(__('<strong>Billing Street address</strong> field has a too short input (min: 10).'), 'error');
     }
 }
+
+// function add_something() {
+//     echo 'hello there';
+// }
+// add_action('woocommerce_checkout_order_review','add_something');
