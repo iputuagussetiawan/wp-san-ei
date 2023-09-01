@@ -143,3 +143,13 @@
     display: block;
     width: 100%;
 }
+
+a.remove{
+    &::before {
+        content: url('https://api.iconify.design/ic/round-close.svg') !important;
+        transition: 0.4s ease;
+    }
+    &:hover::before{
+        content: url('https://api.iconify.design/ic/round-close.svg?color=%23f36969') !important;
+    }
+}

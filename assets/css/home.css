@@ -178,6 +178,14 @@ a:hover {
   width: 100%;
 }
 
+a.remove::before {
+  content: url("https://api.iconify.design/ic/round-close.svg") !important;
+  transition: 0.4s ease;
+}
+a.remove:hover::before {
+  content: url("https://api.iconify.design/ic/round-close.svg?color=%23f36969") !important;
+}
+
 .form-check .form-check-label {
   font-weight: 500;
   font-size: 16px;
