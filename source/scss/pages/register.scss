@@ -5,18 +5,18 @@
 
 .section-register{
     background-color: color(gray,25);
-}
-
-.woocommerce{
-    max-width: 80%;
-    margin: 0 auto;
-    @media only screen and (max-width: 1399.98px) {
-        max-width: 100%;
+    .woocommerce{
+        max-width: 80%;
+        margin: 0 auto;
+        @media only screen and (max-width: 1399.98px) {
+            max-width: 100%;
+        }
+    }
+    
+    .woocommerce-error{
+        color: red;
+        list-style: none;
+        padding: 0px;
     }
 }
 
-.woocommerce-error{
-    color: red;
-    list-style: none;
-    padding: 0px;
-}

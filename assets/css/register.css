@@ -149,18 +149,16 @@ a:hover {
 .section-register {
   background-color: #f7f8f9;
 }
-
-.woocommerce {
+.section-register .woocommerce {
   max-width: 80%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 1399.98px) {
-  .woocommerce {
+  .section-register .woocommerce {
     max-width: 100%;
   }
 }
-
-.woocommerce-error {
+.section-register .woocommerce-error {
   color: red;
   list-style: none;
   padding: 0px;
