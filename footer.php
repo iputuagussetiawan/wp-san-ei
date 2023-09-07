@@ -90,7 +90,7 @@
 		</footer>
 		<div class="offcanvas offcanvas-end offcanvas-shopping" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
 			<div class="offcanvas-header offcanvas-shopping__header">
-				<h5 id="offcanvasRightLabel" class="offcanvas-shopping__title">Shopping Cart</h5>
+				<h5 id="offcanvasRightLabel" class="offcanvas-shopping__title"><?php echo pll__('Shopping Cart')?></h5>
 				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
 			<div class="offcanvas-body offcanvas-shopping__body">

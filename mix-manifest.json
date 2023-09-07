@@ -4,12 +4,14 @@
     "/assets/js/login.js": "/assets/js/login.js",
     "/assets/js/register.js": "/assets/js/register.js",
     "/assets/js/myaccount.js": "/assets/js/myaccount.js",
-    "/assets/css/my-account.css": "/assets/css/my-account.css",
+    "/assets/js/checkout.js": "/assets/js/checkout.js",
     "/assets/css/single-product.css": "/assets/css/single-product.css",
     "/assets/css/archive-products.css": "/assets/css/archive-products.css",
+    "/assets/css/register.css": "/assets/css/register.css",
     "/assets/css/home.css": "/assets/css/home.css",
     "/assets/css/layout.css": "/assets/css/layout.css",
     "/assets/css/checkout.css": "/assets/css/checkout.css",
     "/assets/css/cart.css": "/assets/css/cart.css",
-    "/assets/css/wishlist.css": "/assets/css/wishlist.css"
+    "/assets/css/wishlist.css": "/assets/css/wishlist.css",
+    "/assets/css/my-account.css": "/assets/css/my-account.css"
 }

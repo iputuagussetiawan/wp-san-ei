@@ -1,5 +1,9 @@
 <?php
 
+//GLOBAL
+
+pll_register_string( 'search-all-products', 'Search All Products', 'Home');
+pll_register_string( 'shopping-cart', 'Shopping Cart', 'Home');
 // HOME
 pll_register_string( 'scroll_down', 'Scroll down', 'Home');
 pll_register_string( 'premium_series', 'premium series', 'Home');
@@ -47,6 +51,11 @@ pll_register_string( 'already_have_account', 'Already have an account?', 'Woocom
 pll_register_string( 'sign_in', 'Sign In', 'Woocommerce');
 pll_register_string( 'please_input_5character','Please input min 5 character', 'Woocommerce');
 pll_register_string( 'more_product', 'more product', 'Woocommerce');
+pll_register_string( 'order_list', 'Order List', 'Woocommerce');
+pll_register_string( 'order_received', 'Order Received', 'Woocommerce');
+
+
+
 
 // NEWS
 pll_register_string( 'share', 'Share', 'News');
