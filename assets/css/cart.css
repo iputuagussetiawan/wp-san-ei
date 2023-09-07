@@ -111,13 +111,6 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cart-page .shop_table tbody tr td.product-remove {
-  width: 72px;
-}
-.cart-page .shop_table tbody tr td.product-remove .remove::before {
-  content: "";
-  background: url("https://api.iconify.design/ic/outline-close.svg") no-repeat center center/contain;
-}
 .cart-page .shop_table tbody tr td.product-thumbnail,
 .cart-page .shop_table tbody tr td.product-quantity,
 .cart-page .shop_table tbody tr td.product-price,

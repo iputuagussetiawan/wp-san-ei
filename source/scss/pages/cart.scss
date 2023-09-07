@@ -85,15 +85,15 @@
                         object-fit: cover;
                     }
                 }
-                td.product-remove{
-                    width: 72px;
-                    .remove{
-                        &::before{
-                            content: '';
-                            background: url('https://api.iconify.design/ic/outline-close.svg') no-repeat center center / contain;
-                        }
-                    }
-                }
+                // td.product-remove{
+                //     width: 72px;
+                //     .remove{
+                //         &::before{
+                //             content: '';
+                //             background: url('https://api.iconify.design/ic/outline-close.svg') no-repeat center center / contain;
+                //         }
+                //     }
+                // }
                 td.product-thumbnail,
                 td.product-quantity,
                 td.product-price,

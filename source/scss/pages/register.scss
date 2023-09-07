@@ -1,0 +1,6 @@
+@use 'sass:math';
+@use '../_config.scss' as *;
+@use '../config/_reset.scss';
+.section-register{
+    background-color: color(gray,25);
+}
