@@ -22,6 +22,10 @@ function script_enqueue() {
         wp_enqueue_style('register_css', get_stylesheet_directory_uri() . '/assets/css/register.css', array(), $themeVersion, 'all');
         wp_enqueue_script('register_js', get_stylesheet_directory_uri() . '/assets/js/register.js', array(), $themeVersion, true);
     }
+	if (is_page_template('page-login.php')) {
+        wp_enqueue_style('login_css', get_stylesheet_directory_uri() . '/assets/css/login.css', array(), $themeVersion, 'all');
+       // wp_enqueue_script('login_js', get_stylesheet_directory_uri() . '/assets/js/register.js', array(), $themeVersion, true);
+    }
 	if (is_page_template('page-myaccount.php')) {
         wp_enqueue_style('myaccount', get_stylesheet_directory_uri() . '/assets/css/my-account.css', array(), $themeVersion, 'all');
         wp_enqueue_script('myaccount', get_stylesheet_directory_uri() . '/assets/js/myaccount.js', array(), $themeVersion, true);

@@ -60,6 +60,9 @@ a:hover {
 .my-account .woocommerce .woocommerce-Button {
   margin-top: 40px;
 }
+.my-account .woocommerce .btn-reset-password {
+  margin-top: 10px;
+}
 .my-account .woocommerce-MyAccount-navigation ul {
   padding: 10px;
   list-style: none;

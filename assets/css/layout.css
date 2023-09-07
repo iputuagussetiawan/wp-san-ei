@@ -13947,6 +13947,8 @@ td.xoo-cp-remove .xoo-cp-remove-pd:hover {
 }
 .woocommerce-error {
   color: red;
+  padding: 0px;
+  list-style: none;
 }
 
 /*# sourceMappingURL=layout.css.map*/

@@ -10,10 +10,11 @@ mix
   .sass("source/scss/layout.scss", "assets/css/")
   .sass("source/scss/pages/home.scss", "assets/css/")
   .sass("source/scss/pages/register.scss", "assets/css/")
-  .sass("source/scss/pages/archive-products.scss", "assets/css/")
-  .sass("source/scss/pages/single-product.scss", "assets/css/")
+  .sass("source/scss/pages/login.scss", "assets/css/")
   .sass("source/scss/pages/my-account.scss", "assets/css/")
   .sass("source/scss/pages/wishlist.scss", "assets/css/")
+  .sass("source/scss/pages/archive-products.scss", "assets/css/")
+  .sass("source/scss/pages/single-product.scss", "assets/css/")
   .sass("source/scss/pages/cart.scss", "assets/css/")
   .sass("source/scss/pages/checkout.scss", "assets/css/")
   .sourceMaps(true, "source-map");
