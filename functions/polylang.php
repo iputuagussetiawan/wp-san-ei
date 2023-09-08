@@ -53,9 +53,8 @@ pll_register_string( 'please_input_5character','Please input min 5 character', '
 pll_register_string( 'more_product', 'more product', 'Woocommerce');
 pll_register_string( 'order_list', 'Order List', 'Woocommerce');
 pll_register_string( 'order_received', 'Order Received', 'Woocommerce');
-
-
-
+pll_register_string( 'dashboard_msg', 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">billing address</a>, and <a href="%3$s">edit your password and account details</a>.', 'Woocommerce');
+pll_register_string( 'dashboard_msg2','From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a>, and <a href="%3$s" class="dashboard-link">edit your password and account details</a>.', 'Woocommerce');
 
 // NEWS
 pll_register_string( 'share', 'Share', 'News');

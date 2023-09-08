@@ -38,6 +38,8 @@ a:hover {
 }
 
 .card-registerlogin {
+  width: 80%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 2.5fr 3fr;
   align-items: center;
@@ -149,19 +151,20 @@ a:hover {
 .section-register {
   background-color: #f7f8f9;
 }
-.section-register .woocommerce {
-  max-width: 80%;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 1399.98px) {
-  .section-register .woocommerce {
-    max-width: 100%;
-  }
-}
 .section-register .woocommerce-error {
   color: red;
   list-style: none;
   padding: 0px;
+}
+
+.woocommerce-notices-wrapper {
+  max-width: 80%;
+  margin: 0px auto;
+}
+@media only screen and (max-width: 1399.98px) {
+  .woocommerce-notices-wrapper .woocommerce-notices-wrapper {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=register.css.map*/

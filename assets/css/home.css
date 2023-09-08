@@ -203,6 +203,7 @@ a.remove:hover::before {
 //////////////// FORM SETUP ///////////////
 -----------------------------------------*/
 select,
+textarea,
 .form-control-custom,
 .form-control,
 .input-text {
@@ -220,6 +221,7 @@ select,
   background-color: #ffffff;
 }
 select:focus,
+textarea:focus,
 .form-control-custom:focus,
 .form-control:focus,
 .input-text:focus {
@@ -228,11 +230,12 @@ select:focus,
   outline: none;
   background-color: #ffffff;
 }
-select::-moz-placeholder, .form-control-custom::-moz-placeholder, .form-control::-moz-placeholder, .input-text::-moz-placeholder {
+select::-moz-placeholder, textarea::-moz-placeholder, .form-control-custom::-moz-placeholder, .form-control::-moz-placeholder, .input-text::-moz-placeholder {
   color: #E5E5E5;
   font-weight: 400;
 }
 select::placeholder,
+textarea::placeholder,
 .form-control-custom::placeholder,
 .form-control::placeholder,
 .input-text::placeholder {
@@ -240,6 +243,7 @@ select::placeholder,
   font-weight: 400;
 }
 select.wpcf7-not-valid,
+textarea.wpcf7-not-valid,
 .form-control-custom.wpcf7-not-valid,
 .form-control.wpcf7-not-valid,
 .input-text.wpcf7-not-valid {
@@ -252,6 +256,7 @@ select.wpcf7-not-valid,
 }
 @media only screen and (max-width: 1919.98px) {
   select,
+  textarea,
   .form-control-custom,
   .form-control,
   .input-text {

@@ -14,6 +14,23 @@
  * @package WooCommerce\Templates
  * @version 7.0.1
  */
+$currentLang = pll_current_language();
+$pageLoginID = get_field('login_link', 'page_link')->ID;
+$loginThumbnail=get_field('page_thumbnail' , $pageLoginID);
+if ($loginThumbnail) :
+	$urlLoginThumbnail = $loginThumbnail['url'];
+else :
+	$urlLoginThumbnail = get_stylesheet_directory_uri() . '/images/blank-image.svg';
+endif;
+
+
+$pageRegisterID = get_field('register_link', 'page_link')->ID;
+$registerThumbnail=get_field('page_thumbnail' , $pageRegisterID);
+if ($registerThumbnail) :
+	$urlRegisterThumbnail = $registerThumbnail['url'];
+else :
+	$urlRegisterThumbnail = get_stylesheet_directory_uri() . '/images/blank-image.svg';
+endif;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -29,14 +46,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php endif; ?>
 		<div class="card-registerlogin__image-container">
-			<img class="card-registerlogin__image ratio-item" src="<?php echo get_stylesheet_directory_uri() . '/images/login.jpg'?>" alt="Login and register image">
+			<img class="card-registerlogin__image ratio-item" src="<?php echo $urlLoginThumbnail; ?>" alt="Login and register image">
 		</div>
 		<div class="card-registerlogin__form-container">
 			<h2 class="card-registerlogin__title section-title"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 			<form class="woocommerce-form woocommerce-form-login login" method="post">
-
 				<?php do_action( 'woocommerce_login_form_start' ); ?>
-
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
@@ -51,9 +66,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					
 					<input class="woocommerce-Input woocommerce-Input--text input-text form-control" type="password" name="password" id="password" autocomplete="current-password" />
 				</p>
-
 				<?php do_action( 'woocommerce_login_form' ); ?>
-
 				<p class="form-row">
 					<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme card-registerlogin__remember-me">
 						<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
@@ -62,17 +75,21 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					<button type="submit" class="btn btn-primary card-registerlogin__btn woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
 				</p>
 				<?php do_action( 'woocommerce_login_form_end' ); ?>
-
+				<p class="register-link text-center"><span><?php echo pll__('Dont Have an Account?')?></span> 
+					<a href="<?php if ($currentLang=='en') {?>
+							<?php echo get_option("siteurl"); ?>/register
+						<?php } elseif ($currentLang=='id') { ?>
+							<?php echo get_option("siteurl"); ?>/id/daftar
+						<?php } ?>"><?php echo pll__('Sign up')?>
+					</a>
+				</p>
 			</form>
-
 		</div>
-		
-
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 	</div>
 	<div class="u-column2 card-registerlogin">
 		<div class="card-registerlogin__image-container">
-			<img class="card-registerlogin__image ratio-item" src="<?php echo get_stylesheet_directory_uri() . '/images/login.jpg'?>" alt="Login and register image">
+			<img class="card-registerlogin__image ratio-item" src="<?php echo $urlRegisterThumbnail;?>" alt="Login and register image">
 		</div>
 		<div class="card-registerlogin__form-container">
 			<h2 class="card-registerlogin__title section-title"><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>

@@ -9,7 +9,7 @@ get_header();
 		get_template_part('template-parts/sections/home', 'categories');
 		get_template_part('template-parts/sections/home', 'about');
 		get_template_part('template-parts/sections/home', 'featuredproduct');
-		// get_template_part('template-parts/sections/other','link');
+		get_template_part('template-parts/sections/other','link');
     ?>
 </main>
 <?php

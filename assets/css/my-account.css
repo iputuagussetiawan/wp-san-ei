@@ -37,6 +37,117 @@ a:hover {
   text-decoration: none;
 }
 
+.card-registerlogin {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.5fr 3fr;
+  align-items: center;
+  background-color: #ffffff;
+}
+.card-registerlogin__image-container {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.card-registerlogin__image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-registerlogin__image-container:before {
+  content: "";
+  display: block;
+  padding-top: 121.6949152542%;
+}
+.card-registerlogin label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 194.444%;
+}
+.card-registerlogin label .required {
+  color: #EB5757;
+}
+.card-registerlogin__lost-password {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 194.444%;
+}
+.card-registerlogin__image-container {
+  height: 100%;
+}
+.card-registerlogin__form-container {
+  padding: 50px 80px;
+}
+.card-registerlogin__title {
+  margin-bottom: 30px;
+  color: #607D8B;
+}
+.card-registerlogin__btn {
+  width: 100%;
+  display: block;
+}
+.card-registerlogin__remember-me {
+  display: inline-block;
+  margin: 15px 0px 30px !important;
+}
+@media only screen and (max-width: 1919.98px) {
+  .card-registerlogin__form-container {
+    padding: 2.604166vw 4.166vw;
+  }
+}
+@media only screen and (max-width: 1399.98px) {
+  .card-registerlogin label, .card-registerlogin__lost-password {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .card-registerlogin .woocommerce-privacy-policy-text {
+    font-size: 14px;
+  }
+  .card-registerlogin labe, .card-registerlogin__lost-passwordl {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .card-registerlogin__title {
+    margin-bottom: 14px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .card-registerlogin {
+    grid-template-columns: 1fr;
+  }
+  .card-registerlogin__image-container {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .card-registerlogin__image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card-registerlogin__image-container:before {
+    content: "";
+    display: block;
+    padding-top: 87.9396984925%;
+  }
+  .card-registerlogin__image-container {
+    margin-bottom: 64px;
+  }
+}
+
 .my-account .woocommerce label {
   font-size: 18px;
   font-style: normal;

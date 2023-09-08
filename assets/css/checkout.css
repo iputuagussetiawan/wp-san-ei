@@ -116,9 +116,9 @@ a:hover {
   margin-bottom: 12px;
 }
 .checkout .wc_payment_method label img {
-  max-width: 72px;
-  max-height: 72px;
-  width: 60px;
+  max-width: 80px;
+  max-height: 80px;
+  width: 72px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;

@@ -1,6 +1,7 @@
 @use 'sass:math';
 @use '../_config.scss' as *;
 @use '../config/_reset.scss';
+@use '../partial/components/cards/_card-registerlogin.scss' as *;
 .my-account{
     .woocommerce{
         label{

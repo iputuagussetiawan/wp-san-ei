@@ -10,6 +10,9 @@ get_header();
             ?>
         </div>
     </section>
+    <?php 
+        get_template_part('template-parts/components/ui/breadcrumb');
+    ?>
 </main>
 <?php
 get_footer();
