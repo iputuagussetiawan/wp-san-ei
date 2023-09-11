@@ -63,6 +63,21 @@
     background-color: #ffffff;
     z-index: 20;
     border-bottom: 1px solid color(gray,100);
+    transition: 0.4s ease;
+    position: fixed;
+    top: 36px;
+
+    &.show{
+        top: 0px;
+        opacity: 1;
+        box-shadow: 1px 1px 22px -3px rgba(0,0,0,.13);
+        border-bottom: unset;
+    }
+    &.hide{
+        top: -200px;
+        opacity: 0;
+        
+    }
 
     .navbar-desktop{
         background-color: #ffffff;
@@ -315,6 +330,10 @@
     }
     @media only screen and (max-width: 991.98px) {
         z-index: 20000000;
+        top: 0px;
+        &.show{
+            box-shadow: none;
+        }
         .cart-wishlist-holder{
             display: none;
         }
@@ -621,3 +640,23 @@
     }
 }
 /* ============ mobile view .end// ============ */
+
+
+
+.screen-darken{
+    content: ''; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.613);
+    pointer-events: none;
+    z-index:10; 
+    opacity:1; 
+    visibility:visible;
+    position: fixed;
+}
+// .navbar{
+//     position: relative;
+//     z-index: 15;
+// }

@@ -38,7 +38,8 @@ a:hover {
 }
 
 .btn,
-.woocommerce-Button--alt {
+.woocommerce-Button--alt,
+button[name=calc_shipping] {
   padding: 12px;
   font-size: 18px;
   letter-spacing: 1.4px;
@@ -49,13 +50,15 @@ a:hover {
 }
 @media only screen and (max-width: 1919.98px) {
   .btn,
-  .woocommerce-Button--alt {
+  .woocommerce-Button--alt,
+  button[name=calc_shipping] {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 991.98px) {
   .btn,
-  .woocommerce-Button--alt {
+  .woocommerce-Button--alt,
+  button[name=calc_shipping] {
     font-size: 14px;
   }
 }
@@ -70,13 +73,15 @@ a:hover {
 }
 
 .btn.btn-primary,
-.woocommerce-Button--alt {
+.woocommerce-Button--alt,
+button[name=calc_shipping] {
   color: #ffffff;
   background-color: #607D8B;
   border: 1px solid #607D8B;
 }
 .btn.btn-primary:hover,
-.woocommerce-Button--alt:hover {
+.woocommerce-Button--alt:hover,
+button[name=calc_shipping]:hover {
   color: #ffffff;
   background-color: #80a0b1;
   border-color: #80a0b1;
@@ -84,13 +89,17 @@ a:hover {
 .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:first-child:active,
 .woocommerce-Button--alt:focus,
 .woocommerce-Button--alt:active,
-.woocommerce-Button--alt:first-child:active {
+.woocommerce-Button--alt:first-child:active,
+button[name=calc_shipping]:focus,
+button[name=calc_shipping]:active,
+button[name=calc_shipping]:first-child:active {
   color: #ffffff;
   background-color: #607D8B;
   border-color: #607D8B;
 }
 .btn.btn-primary.disabled,
-.woocommerce-Button--alt.disabled {
+.woocommerce-Button--alt.disabled,
+button[name=calc_shipping].disabled {
   color: #ffffff;
 }
 

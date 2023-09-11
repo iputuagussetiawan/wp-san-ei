@@ -2,7 +2,8 @@
 @use '../../_config.scss' as *;
 
 .btn,
-.woocommerce-Button--alt{
+.woocommerce-Button--alt,
+button[name="calc_shipping"]{
     padding: 12px;
     font-size:18px;
     letter-spacing: 1.4px;
@@ -28,7 +29,8 @@
     }
 }
 .btn.btn-primary,
-.woocommerce-Button--alt{
+.woocommerce-Button--alt,
+button[name="calc_shipping"]{
     color: color(white);
     background-color:color(blue,500);
     border: 1px solid color(blue,500);

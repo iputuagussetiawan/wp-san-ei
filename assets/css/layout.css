@@ -12085,6 +12085,19 @@ a:hover {
   background-color: #ffffff;
   z-index: 20;
   border-bottom: 1px solid #E0E0E0;
+  transition: 0.4s ease;
+  position: fixed;
+  top: 36px;
+}
+.navbar-custom.show {
+  top: 0px;
+  opacity: 1;
+  box-shadow: 1px 1px 22px -3px rgba(0, 0, 0, 0.13);
+  border-bottom: unset;
+}
+.navbar-custom.hide {
+  top: -200px;
+  opacity: 0;
 }
 .navbar-custom .navbar-desktop {
   background-color: #ffffff;
@@ -12310,6 +12323,10 @@ a:hover {
 @media only screen and (max-width: 991.98px) {
   .navbar-custom {
     z-index: 20000000;
+    top: 0px;
+  }
+  .navbar-custom.show {
+    box-shadow: none;
   }
   .navbar-custom .cart-wishlist-holder {
     display: none;
@@ -12617,6 +12634,20 @@ a:hover {
   }
 }
 /* ============ mobile view .end// ============ */
+.screen-darken {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.613);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+}
+
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -12754,7 +12785,8 @@ a:hover {
 }
 
 .btn,
-.woocommerce-Button--alt {
+.woocommerce-Button--alt,
+button[name=calc_shipping] {
   padding: 12px;
   font-size: 18px;
   letter-spacing: 1.4px;
@@ -12765,13 +12797,15 @@ a:hover {
 }
 @media only screen and (max-width: 1919.98px) {
   .btn,
-  .woocommerce-Button--alt {
+  .woocommerce-Button--alt,
+  button[name=calc_shipping] {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 991.98px) {
   .btn,
-  .woocommerce-Button--alt {
+  .woocommerce-Button--alt,
+  button[name=calc_shipping] {
     font-size: 14px;
   }
 }
@@ -12786,13 +12820,15 @@ a:hover {
 }
 
 .btn.btn-primary,
-.woocommerce-Button--alt {
+.woocommerce-Button--alt,
+button[name=calc_shipping] {
   color: #ffffff;
   background-color: #607D8B;
   border: 1px solid #607D8B;
 }
 .btn.btn-primary:hover,
-.woocommerce-Button--alt:hover {
+.woocommerce-Button--alt:hover,
+button[name=calc_shipping]:hover {
   color: #ffffff;
   background-color: #80a0b1;
   border-color: #80a0b1;
@@ -12800,13 +12836,17 @@ a:hover {
 .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:first-child:active,
 .woocommerce-Button--alt:focus,
 .woocommerce-Button--alt:active,
-.woocommerce-Button--alt:first-child:active {
+.woocommerce-Button--alt:first-child:active,
+button[name=calc_shipping]:focus,
+button[name=calc_shipping]:active,
+button[name=calc_shipping]:first-child:active {
   color: #ffffff;
   background-color: #607D8B;
   border-color: #607D8B;
 }
 .btn.btn-primary.disabled,
-.woocommerce-Button--alt.disabled {
+.woocommerce-Button--alt.disabled,
+button[name=calc_shipping].disabled {
   color: #ffffff;
 }
 
