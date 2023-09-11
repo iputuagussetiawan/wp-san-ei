@@ -2975,8 +2975,10 @@ document.addEventListener("DOMContentLoaded", function () {
 var searchToggle = document.querySelector('.search-toggle');
 searchToggle.addEventListener("click", function (event) {
   var menu = document.querySelector('#searchform');
+  var searchField = document.querySelector('.search-box__input');
   menu.classList.toggle('open');
   searchToggle.classList.toggle('close');
+  searchField.focus();
 });
 
 /***/ }),

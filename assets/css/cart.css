@@ -75,6 +75,9 @@ a:hover {
   list-style: none;
   padding: 0px;
 }
+.cart-page .woocommerce-shipping-methods.shipping-hidden {
+  display: none;
+}
 .cart-page .shop_table thead tr th {
   background-color: rgba(96, 125, 139, 0.1);
   padding: 24px;

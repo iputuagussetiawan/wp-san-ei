@@ -4,7 +4,6 @@
 
 
 .checkout{
-
     .page-title{
         margin-bottom: 120px;
         font-size: 64px;
@@ -81,7 +80,16 @@
         .woocommerce-shipping-methods{
             padding: 0px;
             list-style: none;
+            &.shipping-hidden{
+                display: none;
+            }
         }
+
+    
+    }
+
+    #payment .payment_methods>.wc_payment_method>label::before {
+        display: none;
     }
     .wc_payment_methods{
         display: grid;
@@ -90,25 +98,73 @@
     }
 
     .wc_payment_method{
+        position: relative;
         border: 1px solid color(gray,50);
         padding: 16px;
         border-radius: 8px;
 
+
         label{
+            position: relative;
             display: grid;
             align-items: center;
-            grid-template-columns: 24px 1fr 72px;
-            margin-bottom: 12px;
+            grid-template-columns:1fr 80px;
+            gap: 8px;
+            margin-bottom: 0px;
 
             img{
-                max-width: 80px;
-                max-height: 80px;
+                max-width: 80px !important;
+                max-height: unset !important;
                 width: 72px;
                 height: auto;
                 object-fit: cover;
             }
         }
+        .payment_box{
+            margin-top: 12px;
+        }
+        &.payment_method_bacs {
+            padding-right: 95px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 2px;
+                right: 16px;
+                width:50px;
+                height: 50px;
+                border-radius: 8px;
+                background: url('https://api.iconify.design/mingcute/bank-card-fill.svg?color=%23607d8b') no-repeat center center / contain;
+            }
+        }
+        &.payment_method_cod{
+            padding-right: 95px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 2px;
+                right: 16px;
+                width:50px;
+                height: 50px;
+                border-radius: 8px;
+                background: url('https://api.iconify.design/mdi/payment-on-delivery-outline.svg?color=%23607d8b') no-repeat center center / contain;
+            }
+        }
+        &.payment_method_cheque{
+            padding-right: 95px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 2px;
+                right: 16px;
+                width:50px;
+                height: 50px;
+                border-radius: 8px;
+                background: url('https://api.iconify.design/mdi/cheque-book.svg?color=%23607d8b') no-repeat center center / contain;
+            }
+        }
     }
+
+    
 
     .order-listing-sidebar{
         position: sticky;
@@ -121,7 +177,7 @@
         margin-bottom: 64px;
     }
 
-    @media only screen and (max-width: 767.98px) {
+    @media only screen and (max-width: 750.98px) {
         .page-title{
             margin-bottom: 100px;
             font-size: 36px;
@@ -148,22 +204,13 @@
                 width: 100%;
             }
         }
-
-
-
     }
-
-    
 }
 
 
 input:checked + label {
     font-weight: bold;
 }
-input[type="radio"] {
-    display: none;
-}
-
 input[type="radio"]:checked + *::before {
     border-color: color(blue,500);
 }

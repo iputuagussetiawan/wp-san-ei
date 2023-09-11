@@ -42,6 +42,10 @@
     .woocommerce-shipping-methods{
         list-style: none;
         padding: 0px;
+
+        &.shipping-hidden{
+            display: none;
+        }
     }
 
     .shop_table {

@@ -37,7 +37,7 @@ wp_enqueue_style('product', get_stylesheet_directory_uri().'/assets/css/archive-
 		$catId			 = $productCategory->taxonomy . '_' . $productCategory->term_id;
 		$pageHeaderTitle = $productCategory->name;
 	elseif (is_search()) :
-		$pageHeaderTitle=pll__('Search Result for');
+		$pageHeaderTitle=pll__('Search Result for').' '.get_search_query() ;
 	else:
 		$pageHeaderTitle= pll__('Products');
 	endif;

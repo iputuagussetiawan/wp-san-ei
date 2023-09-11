@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const searchToggle = document.querySelector('.search-toggle');
 searchToggle.addEventListener("click", (event) => {
 	let menu = document.querySelector('#searchform');
+	let searchField=document.querySelector('.search-box__input');
 	menu.classList.toggle('open');
 	searchToggle.classList.toggle('close');
+	searchField.focus();
 });
 

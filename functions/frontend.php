@@ -29,38 +29,38 @@ function add_membership_in_menu($items, $args){
         $product_categories = get_terms('product_cat', $cat_args);
         $currentLang = pll_current_language();
         $item = '<li class="menu-item dropdown nav-item has-megamenu order-3">';
-        if ($currentLang=='en') {
-            $productEN = get_field('product_categories_en', 'option');
-            $item .= '<a href="'. $productEN .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Products</span></a>';
-        } elseif ($currentLang=='id') {
-            $productID = get_field('product_categories_id', 'option');
-            $item .= '<a href="'. $productID .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Produk</span></a>';
-        }
-        $item .= '<div class="dropdown-menu megamenu">';
-            $item .= '<div class="megamenu__grid">';
-            foreach ($product_categories as $category) {
-                $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
-                $image = wp_get_attachment_image_src( $thumbnail_id, 'large' );
-                $item .= '<div class="menu-item nav-item megamenu-item">';
-                $item .= '<a href="' . get_category_link($category->term_id) . '" class="dropdown-item megamenu-item__link">';
-                $item .= '<div class="megamenu-item__image-container">';
-                $item .= '<img class="megamenu-item__image" src="'. $image[0]. '" alt="'. $category->name .'">';
+                if ($currentLang=='en') {
+                    $productEN = get_field('product_categories_en', 'option');
+                    $item .= '<a href="'. $productEN .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Products</span></a>';
+                } elseif ($currentLang=='id') {
+                    $productID = get_field('product_categories_id', 'option');
+                    $item .= '<a href="'. $productID .'" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link"><span itemprop="name">Produk</span></a>';
+                }
+                $item .= '<div class="dropdown-menu megamenu">';
+                    $item .= '<div class="megamenu__grid">';
+                    foreach ($product_categories as $category) {
+                            $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+                            $image = wp_get_attachment_image_src( $thumbnail_id, 'large' );
+                            $item .= '<div class="menu-item nav-item megamenu-item">';
+                            $item .= '<a href="' . get_category_link($category->term_id) . '" class="dropdown-item megamenu-item__link">';
+                            $item .= '<div class="megamenu-item__image-container">';
+                            $item .= '<img class="megamenu-item__image" src="'. $image[0]. '" alt="'. $category->name .'">';
+                            $item .= '</div>';
+                            $item .= '<div class="megamenu-item__title">'. $category->name .'</div>';
+                            $item .= '</a>';
+                            $item .= '</div>';
+                        }
+                        $item .= '<div class="menu-item nav-item text-center megamenu-item">';
+                                if ($currentLang=='en') {
+                                    $categoriPage = get_field('product_categories_en', 'option');
+                                    $item .= '<a href="' . $categoriPage . '" class="btn-standard">explore more</a>';
+                                } elseif ($currentLang=='id') {
+                                    $categoriPageID = get_field('product_categories_id', 'option');
+                                    $item .= '<a href="' . $categoriPageID . '" class="btn-standard">selengkapnya</a>';
+                                }
+                        $item .= '</div>';
                 $item .= '</div>';
-                $item .= '<div class="megamenu-item__title">'. $category->name .'</div>';
-                $item .= '</a>';
-                $item .= '</div>';
-            }
-        $item .= '<div class="menu-item nav-item text-center megamenu-item">';
-        if ($currentLang=='en') {
-            $categoriPage = get_field('product_categories_en', 'option');
-            $item .= '<a href="' . $categoriPage . '" class="btn-standard">explore more</a>';
-        } elseif ($currentLang=='id') {
-            $categoriPageID = get_field('product_categories_id', 'option');
-            $item .= '<a href="' . $categoriPageID . '" class="btn-standard">selengkapnya</a>';
-        }
-        $item .= '</div>';
-        $item .= '</div>';
-        $item .= '</div>';
+            $item .= '</div>';
         $item .= '</li>';
         $items .= $item;
     }

@@ -99,29 +99,80 @@ a:hover {
   padding: 0px;
   list-style: none;
 }
+.checkout .woocommerce-shipping-totals .woocommerce-shipping-methods.shipping-hidden {
+  display: none;
+}
+.checkout #payment .payment_methods > .wc_payment_method > label::before {
+  display: none;
+}
 .checkout .wc_payment_methods {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }
 .checkout .wc_payment_method {
+  position: relative;
   border: 1px solid #ececec;
   padding: 16px;
   border-radius: 8px;
 }
 .checkout .wc_payment_method label {
+  position: relative;
   display: grid;
   align-items: center;
-  grid-template-columns: 24px 1fr 72px;
-  margin-bottom: 12px;
+  grid-template-columns: 1fr 80px;
+  gap: 8px;
+  margin-bottom: 0px;
 }
 .checkout .wc_payment_method label img {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 80px !important;
+  max-height: unset !important;
   width: 72px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.checkout .wc_payment_method .payment_box {
+  margin-top: 12px;
+}
+.checkout .wc_payment_method.payment_method_bacs {
+  padding-right: 95px;
+}
+.checkout .wc_payment_method.payment_method_bacs::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: url("https://api.iconify.design/mingcute/bank-card-fill.svg?color=%23607d8b") no-repeat center center/contain;
+}
+.checkout .wc_payment_method.payment_method_cod {
+  padding-right: 95px;
+}
+.checkout .wc_payment_method.payment_method_cod::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: url("https://api.iconify.design/mdi/payment-on-delivery-outline.svg?color=%23607d8b") no-repeat center center/contain;
+}
+.checkout .wc_payment_method.payment_method_cheque {
+  padding-right: 95px;
+}
+.checkout .wc_payment_method.payment_method_cheque::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: url("https://api.iconify.design/mdi/cheque-book.svg?color=%23607d8b") no-repeat center center/contain;
 }
 .checkout .order-listing-sidebar {
   position: sticky;
@@ -132,7 +183,7 @@ a:hover {
 .checkout .woocommerce-billing-fields {
   margin-bottom: 64px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 750.98px) {
   .checkout .page-title {
     margin-bottom: 100px;
     font-size: 36px;
@@ -157,10 +208,6 @@ a:hover {
 
 input:checked + label {
   font-weight: bold;
-}
-
-input[type=radio] {
-  display: none;
 }
 
 input[type=radio]:checked + *::before {
