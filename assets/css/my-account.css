@@ -219,6 +219,10 @@ a:hover {
   font-size: 18px;
   line-height: 35px;
 }
+.my-account .woocommerce-PaymentMethods {
+  list-style: none;
+  padding: 0px;
+}
 .my-account .password-change {
   margin-top: 72px;
 }

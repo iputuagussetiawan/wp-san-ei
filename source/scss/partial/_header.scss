@@ -35,6 +35,9 @@
                 .dropdown-item {
                     padding: 8px 16px;
                     text-align: center;
+                    &:focus{
+                        background-color: color(blue,500);
+                    }
                 }
             }
         }
@@ -59,7 +62,7 @@
     padding: 0px;
     background-color: #ffffff;
     z-index: 20;
-    // border-bottom: 1px solid color(gray,100);
+    border-bottom: 1px solid color(gray,100);
 
     .navbar-desktop{
         background-color: #ffffff;
@@ -85,10 +88,10 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    bottom: 0px;
+                    bottom: -1px;
                     left: 0px;
                     width: 100%;
-                    height: 2px;
+                    height: 3px;
                     background-color: color(blue,400);
                     transform: scaleX(0);
                     transform-origin: left;

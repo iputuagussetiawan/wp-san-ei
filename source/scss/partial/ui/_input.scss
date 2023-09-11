@@ -16,8 +16,6 @@
 	}
 }
 
-
-
 /*-----------------------------------------
 //////////////// FORM SETUP ///////////////
 -----------------------------------------*/
@@ -240,4 +238,86 @@ input[type=checkbox]:checked:after {
 	border-right: 2px solid color(blue,500);
 	position: absolute;
 	transform: translate(-50%, -50%) rotate(41deg);
+}
+
+.woocommerce-shipping-methods{
+	li{
+		position: relative;
+	}
+	.shipping_method{
+		visibility: hidden;
+	}
+
+	.shipping_method:checked + label:after{
+		transition: all 0.5s;
+		background-color: color(blue,500);
+	}
+
+
+	label{
+		padding-left: 30px;
+		font-size: 18px;
+		&::before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			left: 0px;
+			top: 10px;
+			width: 20px;
+			height: 20px;
+			
+			outline: solid 3px color(blue,400);
+			border-radius: 50%;
+			
+		}
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 4px;
+			top: 14px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+	}
+}
+
+.woocommerce-Payment{
+	.input-radio{
+		visibility: hidden;
+	}
+
+	.input-radio:checked  + label:after{
+		transition: all 0.5s;
+		background-color: color(blue,500);
+	}
+	
+	.input-radio + label{
+		position: relative;
+		padding-left: 30px;
+		font-size: 18px;
+		&::before{
+			content: "" !important;
+			display: inline-block;
+			position: absolute;
+			left: 0px;
+			top: 10px;
+			width: 20px;
+			height: 20px;
+			outline: solid 3px color(blue,400);
+			border-radius: 50%;
+		}
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 4px;
+			top: 14px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+	}
+
 }

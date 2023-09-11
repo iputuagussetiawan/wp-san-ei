@@ -1,13 +1,15 @@
 @use 'sass:math';
 @use '../../_config.scss' as *;
 
-.btn{
+.btn,
+.woocommerce-Button--alt{
     padding: 12px;
     font-size:18px;
     letter-spacing: 1.4px;
     text-transform: uppercase; 
     border-radius: 0px;
     font-weight: 400;
+    transition: 0.4s ease;
 
     @media only screen and (max-width: 1919.98px) {
         font-size: 16px;
@@ -25,10 +27,11 @@
         box-shadow: none;
     }
 }
-.btn.btn-primary{
+.btn.btn-primary,
+.woocommerce-Button--alt{
     color: color(white);
     background-color:color(blue,500);
-    border-color: color(blue,500);
+    border: 1px solid color(blue,500);
     &:hover{
         color: color(white);
         background-color: color(blue,400);
