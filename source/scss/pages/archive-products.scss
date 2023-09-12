@@ -2,7 +2,7 @@
 @use "../config.scss" as *;
 @use '../partial/sections/_page-header.scss' as *;
 @use '../partial/components/cards/_card-product.scss' as *;
-
+@use '../partial/ui/_pagination.scss' as *;
 /*
 ========================
 PRODUCT
@@ -322,9 +322,9 @@ PRODUCT
 }
 
 // PAGINATION
-.woocommerce-pagination {
-    display: none!important;
-}
+// .woocommerce-pagination {
+//     display: none!important;
+// }
 
 /*
 ========================

@@ -131,6 +131,32 @@
   }
 }
 
+.woocommerce-pagination {
+  order: 1;
+  grid-column: span 2;
+}
+.woocommerce-pagination ul {
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.woocommerce-pagination li span, .woocommerce-pagination li a {
+  padding: 10px 16px;
+  text-decoration: none;
+  border: 1px solid #ececec;
+  font-size: 12px;
+}
+.woocommerce-pagination li span.current {
+  background-color: #607D8B;
+  color: #ffffff;
+}
+.woocommerce-pagination li .next::after,
+.woocommerce-pagination li .prev::after {
+  display: none;
+}
+
 /*
 ========================
 PRODUCT
@@ -491,10 +517,6 @@ PRODUCT
 }
 .product .total-post .woocommerce-ordering .form-select:focus {
   box-shadow: none;
-}
-
-.woocommerce-pagination {
-  display: none !important;
 }
 
 /*

@@ -98,7 +98,7 @@ wp_enqueue_style('product', get_stylesheet_directory_uri().'/assets/css/archive-
 							do_action( 'woocommerce_no_products_found' );
 						endif;
 						?>
-						<div class="text-center">
+						<div class="text-center mt-5">
 							<?php woocommerce_pagination() ?>
 						</div>
 					</div>
@@ -193,7 +193,7 @@ wp_enqueue_style('product', get_stylesheet_directory_uri().'/assets/css/archive-
 							do_action( 'woocommerce_no_products_found' );
 						endif;
 						?>
-						<div class="text-center">
+						<div class="text-center mt-5">
 							<?php woocommerce_pagination() ?>
 						</div>
 					</div>

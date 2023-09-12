@@ -147,6 +147,10 @@
 
                 .nav-item{
                     margin-left: 0px;
+                    border-bottom: 1px solid color(gray,50);
+                    &:last-child{
+                        border-bottom: unset;
+                    }
 
                     .dropdown-item{
                         padding: 12px 24px;
@@ -380,7 +384,6 @@
         }
     }
 }
-
 
 .navbar-brand{
     display: inline-block;

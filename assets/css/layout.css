@@ -12164,6 +12164,10 @@ a:hover {
 }
 .navbar-custom .navbar-nav.menu-left .nav-item .dropdown-menu .nav-item {
   margin-left: 0px;
+  border-bottom: 1px solid #ececec;
+}
+.navbar-custom .navbar-nav.menu-left .nav-item .dropdown-menu .nav-item:last-child {
+  border-bottom: unset;
 }
 .navbar-custom .navbar-nav.menu-left .nav-item .dropdown-menu .nav-item .dropdown-item {
   padding: 12px 24px;
@@ -12959,6 +12963,10 @@ a.remove::before {
 }
 a.remove:hover::before {
   content: url("https://api.iconify.design/ic/round-close.svg?color=%23f36969") !important;
+}
+
+.yith-wcwl-add-button .delete_item {
+  color: transparent;
 }
 
 .form-check .form-check-label {

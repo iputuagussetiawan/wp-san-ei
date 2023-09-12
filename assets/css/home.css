@@ -205,6 +205,10 @@ a.remove:hover::before {
   content: url("https://api.iconify.design/ic/round-close.svg?color=%23f36969") !important;
 }
 
+.yith-wcwl-add-button .delete_item {
+  color: transparent;
+}
+
 .form-check .form-check-label {
   font-weight: 500;
   font-size: 16px;
@@ -802,6 +806,7 @@ input[type=checkbox]:checked:after {
 }
 
 .scroll-down {
+  display: inline-block;
   position: absolute;
   left: 50%;
   bottom: 120px;
@@ -809,7 +814,6 @@ input[type=checkbox]:checked:after {
   z-index: 99;
   color: #ffffff;
   text-align: center;
-  width: 100%;
   cursor: pointer;
 }
 .scroll-down__desc {
@@ -1256,11 +1260,55 @@ input[type=checkbox]:checked:after {
 .card-otherlink:hover .card-otherlink__image {
   transform: scale(1.2) rotate(2deg);
 }
+@media only screen and (max-width: 1399.98px) {
+  .card-otherlink__title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .card-otherlink__title {
+    font-size: 20px;
+  }
+  .card-otherlink__image-container {
+    max-height: 350px;
+  }
+}
 
 .other-link__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+@media only screen and (max-width: 1399.98px) {
+  .other-link__grid {
+    gap: 24px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .other-link__grid {
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .other-link__grid {
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .other-link__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .other-link .card-otherlink:last-child {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .other-link__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .other-link .card-otherlink:last-child {
+    grid-column: span 1;
+  }
 }
 
 /*# sourceMappingURL=home.css.map*/

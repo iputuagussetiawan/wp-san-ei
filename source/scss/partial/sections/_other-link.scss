@@ -8,4 +8,44 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__grid{
+            gap: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            gap: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .card-otherlink{
+            &:last-child{
+                grid-column: span 2;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__grid{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .card-otherlink{
+            &:last-child{
+                grid-column: span 1;
+            }
+        }
+    }
 }

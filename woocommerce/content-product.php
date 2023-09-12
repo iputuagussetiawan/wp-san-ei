@@ -30,11 +30,14 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 do_action( 'woocommerce_before_shop_custom' );
 ?>
-	<a href="<?php the_permalink(); ?>" class="card-product">
+	<div class="card-product">
+        <?php
+            echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+        ?>
 		<div class="card-product__info">
-			<div class="card-product__image-container">
+			<a href="<?php the_permalink();?>" class="card-product__image-container">
 				<?php the_post_thumbnail('full'); ?>
-			</div>
+			</a>
 			<h3 class="card-product__title"><?php the_title(); ?></h3>
             <p class="card-product__price"><?php woocommerce_template_loop_price(); ?></p>
 		</div>
@@ -89,4 +92,7 @@ do_action( 'woocommerce_before_shop_custom' );
             echo '<span class="card-product__on-sale">' . $percentage . ' Off</span>';
         }
         ?>
-    </a>
+        <?php if (function_exists('woocommerce_template_loop_rating')) echo woocommerce_template_loop_rating(); ?>
+        <?php if (function_exists('woo_add_compare_button')) echo woo_add_compare_button(); ?>
+        <?php if (function_exists('woocommerce_template_loop_add_to_cart')) echo woocommerce_template_loop_add_to_cart(); ?>
+    </div>
