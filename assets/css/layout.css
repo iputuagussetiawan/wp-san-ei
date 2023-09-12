@@ -13221,6 +13221,7 @@ input[type=checkbox]:checked:after {
 }
 .woocommerce-shipping-methods .shipping_method {
   visibility: hidden;
+  display: none;
 }
 .woocommerce-shipping-methods .shipping_method:checked + label:after {
   transition: all 0.5s;

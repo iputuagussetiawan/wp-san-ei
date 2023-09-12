@@ -246,6 +246,7 @@ input[type=checkbox]:checked:after {
 	}
 	.shipping_method{
 		visibility: hidden;
+		display: none;
 	}
 
 	.shipping_method:checked + label:after{

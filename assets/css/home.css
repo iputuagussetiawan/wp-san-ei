@@ -461,6 +461,7 @@ input[type=checkbox]:checked:after {
 }
 .woocommerce-shipping-methods .shipping_method {
   visibility: hidden;
+  display: none;
 }
 .woocommerce-shipping-methods .shipping_method:checked + label:after {
   transition: all 0.5s;
@@ -1103,6 +1104,23 @@ input[type=checkbox]:checked:after {
   display: block;
   padding-top: 106.0606060606%;
 }
+.card-product .yith-wcwl-add-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  z-index: 2;
+}
+.card-product .yith-wcwl-add-to-wishlist {
+  margin-top: 0px;
+}
+.card-product .product_type_simple,
+.card-product .added_to_cart.wc-forward {
+  font-size: 18px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
 .card-product__image-container {
   margin-bottom: 30px;
   overflow: hidden;
@@ -1122,7 +1140,7 @@ input[type=checkbox]:checked:after {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  line-height: 250%;
+  line-height: 1.5;
 }
 .card-product__price del {
   padding-right: 10px;
