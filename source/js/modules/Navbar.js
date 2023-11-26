@@ -10,7 +10,6 @@ class Navbar {
         this.burgerMenu = document.querySelector("#hamburger")
         this.btnToggler=document.querySelector('.navbar-custom__toggler');
         this.navHeader = document.querySelector('.navbar-custom');
-        this.dropdowns = document.querySelectorAll(".dropdown")
         this.scrollToTopBtn=document.querySelector(".scroll-up");
         this.lastScrollTop = 0;
         this.dropdowns = document.querySelectorAll(".dropdown")

@@ -3,7 +3,16 @@
 
 .card-product{
     @include imageRatio(330,350);
+    padding: 0px 0px 24px 0px;
     position: relative;
+    transition: 0.4s ease;
+    border: 1px solid transparent;
+    height: 100%;
+
+    &:hover{
+        border: 1px solid color(gray,50);
+    }
+
     .yith-wcwl-add-button{
         position: absolute;
         top: 16px;
@@ -15,11 +24,18 @@
         margin-top: 0px;
     }
     .product_type_simple,
-    .added_to_cart.wc-forward {
+    .added_to_cart.wc-forward,
+    .product_type_variable {
         font-size: 18px;
         text-transform: uppercase;
         display: block;
         text-align: center;
+    }
+    .star-rating{
+        margin: 0 auto;
+    }
+    .delete_item{
+        color: transparent !important;
     }
     &__image-container{
         margin-bottom: 30px;

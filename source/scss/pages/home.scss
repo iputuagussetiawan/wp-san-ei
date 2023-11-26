@@ -12,3 +12,7 @@
 @use '../partial/sections/_home-about.scss' as *;
 @use '../partial/sections/_home-featured-product.scss' as *;
 @use '../partial/sections/_other-link.scss' as *;
+
+main{
+    padding-top: 30px;
+}

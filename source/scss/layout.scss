@@ -32,11 +32,16 @@
 @use 'partial/components/_search-box.scss' as *;
 @use 'partial/components/woocommerce/_woocommerce-mini-cart.scss' as *;
 @use 'partial/components/woocommerce/_xoo-popup.scss' as *;
+@use 'partial/components/woocommerce/_rating-star.scss' as *;
 
 
 // |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| //
 // | Timedoor New Standard                   | //
 // |_________________________________________| //
+
+main{
+    padding-top: 83px
+}
 
 .ratio-item {
     @extend %ratioItem;

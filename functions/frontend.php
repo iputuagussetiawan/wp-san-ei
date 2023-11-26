@@ -53,10 +53,10 @@ function add_membership_in_menu($items, $args){
                         $item .= '<div class="menu-item nav-item text-center megamenu-item">';
                                 if ($currentLang=='en') {
                                     $categoriPage = get_field('product_categories_en', 'option');
-                                    $item .= '<a href="' . $categoriPage . '" class="btn-standard">explore more</a>';
+                                    $item .= '<a href="/product" class="btn-standard">explore more</a>';
                                 } elseif ($currentLang=='id') {
                                     $categoriPageID = get_field('product_categories_id', 'option');
-                                    $item .= '<a href="' . $categoriPageID . '" class="btn-standard">selengkapnya</a>';
+                                    $item .= '<a href="/product" class="btn-standard">selengkapnya</a>';
                                 }
                         $item .= '</div>';
                 $item .= '</div>';

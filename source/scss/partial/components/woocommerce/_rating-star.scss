@@ -1,0 +1,65 @@
+ul.products li.product .star-rating,
+ul.products .wc-block-grid__product .star-rating,
+.wc-block-grid__products li.product .star-rating,
+.wc-block-grid__products .wc-block-grid__product .star-rating {
+    margin: 0 auto .5407911001em
+}
+
+
+ul.products li.product .star-rating,
+ul.products .wc-block-grid__product .star-rating,
+.wc-block-grid__products li.product .star-rating,
+.wc-block-grid__products .wc-block-grid__product .star-rating {
+    font-size: .875em
+}
+
+.single-product div.product .woocommerce-product-rating .star-rating {
+    float: left;
+    margin-right: .6180469716em
+}
+
+.storefront-sticky-add-to-cart .star-rating {
+    display: inline-block;
+    margin: 0;
+    vertical-align: bottom
+}
+
+#reviews .commentlist li .comment_container .comment-text .star-rating {
+    float: right;
+    font-size: .875em;
+    line-height: 1;
+    height: 1em
+}
+
+
+.star-rating {
+    overflow: hidden;
+    position: relative;
+    height: 1.618em;
+    line-height: 1.618;
+    font-size: 1em;
+    width: 5.55em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    &::before,
+    span::before{
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute
+    }
+
+    &::before{
+        opacity: .25;
+        float: left
+    }
+    span{
+        overflow: hidden;
+        float: left;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding-top: 1.5em;
+        color: #f7be52;
+    }
+}
